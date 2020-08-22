@@ -1,14 +1,14 @@
 import React, { useContext } from "react"
-import { Fade } from "react-slideshow-image"
 import styled from "styled-components"
 import { IndexArticles, IndexMemberPosts, SubTitle } from "../components/common"
 import { FirebaseContext } from "../components/Firebase"
+import Fade from "react-reveal/Fade"
 
 const CoverPic = styled.img`
   margin: 0;
   width: 100%;
   padding: 0 0 0;
-  height: 630px;
+  height: 800px;
   object-fit: cover;
 
   @media (min-width: 768px) {
@@ -50,12 +50,10 @@ const IndexPage = ({ data }) => {
           }
         }
       >
-        {/* <Fade {...fadeProperties}> */}
         <CoverPic src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcover-photo2.jpg?alt=media&token=2e15a9eb-c440-484d-8029-96daabdab65f" />
         {/* <CoverPic src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050" /> */}
         {/* <CoverPic src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample6.jpg?alt=media&token=9b723082-8601-4d5a-8561-a9f898b09d5e" />
           <CoverPic src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample7.jpg?alt=media&token=85fc967d-5da8-4903-8d34-a01f5aa69d65" /> */}
-        {/* </Fade> */}
         <div
           style={{
             margin: `0 auto`,
@@ -65,9 +63,11 @@ const IndexPage = ({ data }) => {
         >
           {!!user && (
             <div>
-              <SubTitle>
-                <span>Community</span>
-              </SubTitle>
+              <Fade bottom duration={1500}>
+                <SubTitle>
+                  <span>Community</span>
+                </SubTitle>
+              </Fade>
               {!!firebase && <IndexMemberPosts firebase={firebase} />}
               <div
                 style={{
@@ -80,9 +80,11 @@ const IndexPage = ({ data }) => {
             </div>
           )}
         </div>
-        <SubTitle>
-          <span>Recent Posts</span>
-        </SubTitle>
+        <Fade bottom duration={1500}>
+          <SubTitle>
+            <span>Recent Posts</span>
+          </SubTitle>
+        </Fade>
         {!!firebase && <IndexArticles firebase={firebase} />}
         <div
           style={{
@@ -99,17 +101,21 @@ const IndexPage = ({ data }) => {
           >
             <SeeMore href="/blog">{">>もっと見る"}</SeeMore>
           </div>
-          <SubTitle>
-            <span>Mission</span>
-          </SubTitle>
+          <Fade bottom duration={1500}>
+            <SubTitle>
+              <span>Mission</span>
+            </SubTitle>
+          </Fade>
           <br></br>
           <br></br>
           <br></br>
           <br></br>
           <br></br>
-          <SubTitle>
-            <span>Instagram</span>
-          </SubTitle>
+          <Fade bottom duration={1500}>
+            <SubTitle>
+              <span>Instagram</span>
+            </SubTitle>
+          </Fade>
           <div
             style={{
               // border: `1px solid #e2e8f0`,

@@ -81,22 +81,21 @@ export const PostComments = ({ firebase, postId }) => {
     }
   }, [])
 
-  function doReload() {
-    window.location.reload()
-  }
+  // function doReload() {
+  //   window.location.reload()
+  // }
 
   function handlePostCommentSubmit(e) {
     e.preventDefault()
-    firebase
-      .postComment({
-        text: commentText,
-        postId,
-        photoURL: user.photoURL,
-        username: user.username,
-        memberPostId: postId,
-        time: timeStamp,
-      })
-      .then(() => doReload())
+    firebase.postComment({
+      text: commentText,
+      postId,
+      photoURL: user.photoURL,
+      username: user.username,
+      memberPostId: postId,
+      time: timeStamp,
+    })
+    // .then(() => doReload())
   }
 
   return (

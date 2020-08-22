@@ -54,6 +54,7 @@ export const IndexMemberPosts = ({ firebase }) => {
             margin: `0 auto`,
             maxWidth: 960,
             padding: `0 0.8rem 1.45rem`,
+            overflowX: `hidden`,
           }}
         >
           {latestMemberPosts.map(post => (

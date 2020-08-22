@@ -8,7 +8,7 @@ const CoverPic = styled.img`
   margin: 0;
   width: 100%;
   padding: 0 0 0;
-  height: 800px;
+  height: 750px;
   object-fit: cover;
 
   @media (min-width: 768px) {
@@ -30,14 +30,6 @@ const SeeMore = styled.a`
   }
 `
 
-// const fadeProperties = {
-//   duration: 2000,
-//   transitionDuration: 1500,
-//   infinite: true,
-//   indicators: false,
-//   arrows: false,
-// }
-
 const IndexPage = ({ data }) => {
   const { user, firebase } = useContext(FirebaseContext)
 
@@ -50,10 +42,9 @@ const IndexPage = ({ data }) => {
           }
         }
       >
-        <CoverPic src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcover-photo2.jpg?alt=media&token=2e15a9eb-c440-484d-8029-96daabdab65f" />
-        {/* <CoverPic src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050" /> */}
-        {/* <CoverPic src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample6.jpg?alt=media&token=9b723082-8601-4d5a-8561-a9f898b09d5e" />
-          <CoverPic src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample7.jpg?alt=media&token=85fc967d-5da8-4903-8d34-a01f5aa69d65" /> */}
+        <Fade duration={1500}>
+          <CoverPic src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcover-photo2.jpg?alt=media&token=2e15a9eb-c440-484d-8029-96daabdab65f" />
+        </Fade>
         <div
           style={{
             margin: `0 auto`,
@@ -75,7 +66,9 @@ const IndexPage = ({ data }) => {
                   textAlign: `center`,
                 }}
               >
-                <SeeMore href="/member">{">>もっと見る"}</SeeMore>
+                <Fade bottom duration={1500} delay={500}>
+                  <SeeMore href="/member">{">>もっと見る"}</SeeMore>
+                </Fade>
               </div>
             </div>
           )}
@@ -85,7 +78,9 @@ const IndexPage = ({ data }) => {
             <span>Recent Posts</span>
           </SubTitle>
         </Fade>
-        {!!firebase && <IndexArticles firebase={firebase} />}
+        <Fade duration={1500}>
+          {!!firebase && <IndexArticles firebase={firebase} />}
+        </Fade>
         <div
           style={{
             margin: `0 auto`,
@@ -99,7 +94,9 @@ const IndexPage = ({ data }) => {
               textAlign: `center`,
             }}
           >
-            <SeeMore href="/blog">{">>もっと見る"}</SeeMore>
+            <Fade bottom duration={1500} delay={500}>
+              <SeeMore href="/blog">{">>もっと見る"}</SeeMore>
+            </Fade>
           </div>
           <Fade bottom duration={1500}>
             <SubTitle>
@@ -125,33 +122,37 @@ const IndexPage = ({ data }) => {
               padding: `1rem 0.5rem 1rem`,
             }}
           >
-            <a
-              href="https://www.instagram.com/dlwlrma/?hl=ja"
-              target="_blank"
-              style={{
-                // border: `0 solid #e2e8f0`,
-                borderRadius: `5px`,
-              }}
-            >
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2FInstagram-thumnail.png?alt=media&token=7a577e36-5c8f-43d9-9032-4911cac0b762"
+            <Fade bottom duration={1500}>
+              <a
+                href="https://www.instagram.com/dlwlrma/?hl=ja"
+                target="_blank"
                 style={{
+                  // border: `0 solid #e2e8f0`,
                   borderRadius: `5px`,
                 }}
-              ></img>
-            </a>
+              >
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2FInstagram-thumnail.png?alt=media&token=7a577e36-5c8f-43d9-9032-4911cac0b762"
+                  style={{
+                    borderRadius: `5px`,
+                  }}
+                ></img>
+              </a>
+            </Fade>
             <div
               style={{
                 margin: `0rem auto 1rem`,
                 textAlign: `center`,
               }}
             >
-              <SeeMore
-                href="https://www.instagram.com/dlwlrma/?hl=ja"
-                target="_blank"
-              >
-                {">>もっと見る"}
-              </SeeMore>
+              <Fade bottom duration={1500} delay={500}>
+                <SeeMore
+                  href="https://www.instagram.com/dlwlrma/?hl=ja"
+                  target="_blank"
+                >
+                  {">>もっと見る"}
+                </SeeMore>
+              </Fade>
             </div>
           </div>
         </div>

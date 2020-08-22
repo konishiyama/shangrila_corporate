@@ -81,7 +81,7 @@ const Image = styled.img`
 const PostRoll = props => {
   return (
     <>
-      <Fade right duration={800} distance="30px">
+      <Fade right duration={800} delay={1000} distance="50px">
         <EachPost>
           <Link as={`/member/${props.id}`} href={"/member/[id]"}>
             <A>

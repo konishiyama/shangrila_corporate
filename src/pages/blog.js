@@ -1,5 +1,7 @@
+import Link from "next/link"
 import React, { useContext } from "react"
-import { BlogPageArticles, PageCover } from "../components/common"
+import { BlogPageArticles, PageCover, BottomBar } from "../components/common"
+import CreateIcon from "@material-ui/icons/Create"
 import { FirebaseContext } from "../components/Firebase"
 
 const Blog = () => {
@@ -25,6 +27,23 @@ const Blog = () => {
           }}
         >
           {!!firebase && <BlogPageArticles firebase={firebase} />}
+          {/* {!!user &&  !!user.admin &&
+          <BottomBar>
+          <Link href="/postarticle">
+            <CreateIcon 
+              style={{
+                color: `white`,
+                backgroundColor: `#4c9c41`,
+                borderRadius: `50%`,
+                padding: `0.5rem`,
+                height: `3rem`,
+                width: `3rem`,
+                boxShadow: `rgba(0, 0, 0, 0.4) 0 2px 5px`,
+              }}
+            />
+          </Link>
+        </BottomBar>
+        } */}
         </div>
       </section>
     </>

@@ -20,13 +20,14 @@ function useAuth() {
         if (userResult) {
           // userResult.getIdTokenResult(true).then((result) => {
           //     if(result.claims.admin === true){
-          //     //     setUser({
-          //     //         ...userResult,
-          //     //         admin: true
-          //     // });
+          //       console.log(result);
+          //         setUser({
+          //             ...user,
+          //             admin: true
+          //     });
           //     }else{
           //     }
-          // })
+          // }) 下のsetUserと交錯してしまうのでいったんなし。
           firebaseInstance
             .getUserProfile({
               userId: userResult.uid,
@@ -45,12 +46,9 @@ function useAuth() {
               const [snap] = r.docs
               const data = snap.data()
               setUser({
-                ...user,
-                username: data.id,
-                photoURL: data.proto
-                  ? data.proto.mapValue.fields.photoURL.stringValue
-                  : null,
-                //r.emptyは、userIdが一致するdocumentが存在するかどうかということ。つまりログインしているユーザーが居るか。r.docs[0]idはもってきたpublicProfileドキュメント(r)のID、つまりドキュメント名を指している。
+                ...userResult,
+                username: r.docs[0].id,
+                photoURL: data ? data.photoURL : null,
               })
             })
           // get user custom claims

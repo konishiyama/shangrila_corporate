@@ -7,6 +7,9 @@ const EachArticle = styled.li`
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   width: 90%;
 `
+const A = styled.a`
+  text-decoration: none;
+`
 
 const Container = styled.div`
   width: 100%;
@@ -65,7 +68,7 @@ const ArticleRoll = props => {
     <>
       <EachArticle>
         <Link as={`/article/${props.id}`} href={"/article/[id]"}>
-          <a>
+          <A>
             <Container>
               <ImgContainer>
                 <Thumnail src={props.thumnail}></Thumnail>
@@ -75,7 +78,7 @@ const ArticleRoll = props => {
                 <Date>{props.date}</Date>
               </TextContainer>
             </Container>
-          </a>
+          </A>
         </Link>
       </EachArticle>
     </>

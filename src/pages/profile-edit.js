@@ -102,7 +102,7 @@ const Profile = () => {
       <br></br>
       {!!user && (
         <FormContainer>
-          <Title>EDIT PROFILE</Title>
+          <Title>CHANGE PICTURE</Title>
           {!!PimageUrl && <ProfileImage2 src={PimageUrl}></ProfileImage2>}
 
           <Form onSubmit={onSubmitPFile}>

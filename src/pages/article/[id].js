@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { useRouter } from "next/router"
 import React, { useContext } from "react"
 import { useDocumentDataOnce } from "react-firebase-hooks/firestore"
@@ -10,6 +11,7 @@ import {
   TwitterIcon,
   TwitterShareButton,
 } from "react-share"
+import CreateIcon from "@material-ui/icons/Create"
 import styled from "styled-components"
 import { BottomBar } from "../../components/common"
 import { FirebaseContext } from "../../components/Firebase"
@@ -31,7 +33,7 @@ const ArticleTemplate = props => {
   `
 
   if (!pageContext) {
-    return <p>{"loading.."}</p>
+    return <p></p>
   }
 
   return (
@@ -107,17 +109,19 @@ const ArticleTemplate = props => {
             />
           </LineShareButton>
           {/* {!!user &&  !!user.admin &&
-          <CreateIcon
-            style={{
-              color: `white`,
-              backgroundColor: `#4c9c41`,
-              borderRadius: `50%`,
-              padding: `0.5rem`,
-              height: `3rem`,
-              width: `3rem`,
-              margin: `0 0 0 auto`
-            }}
-          />
+          <Link href="/postarticle">
+            <CreateIcon
+              style={{
+                color: `white`,
+                backgroundColor: `#4c9c41`,
+                borderRadius: `50%`,
+                padding: `0.5rem`,
+                height: `3rem`,
+                width: `3rem`,
+                margin: `0 0 0 auto`
+              }}
+            />
+          </Link>
           }  */}
         </BottomBar>
       </div>

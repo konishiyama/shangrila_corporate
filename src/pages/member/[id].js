@@ -1,138 +1,142 @@
-import CreateIcon from "@material-ui/icons/Create"
+import Link from "next/link"
 import { useRouter } from "next/router"
-import React, { useContext, useEffect } from "react"
-import { useCollectionData } from "react-firebase-hooks/firestore"
+import React, { useContext } from "react"
+import { useDocumentDataOnce } from "react-firebase-hooks/firestore"
+import renderHTML from "react-render-html"
 import styled from "styled-components"
-import { BottomBar, PageCover } from "../../components/common"
+import { PostComments, PageCover, BottomBar } from "../../components/common"
 import { FirebaseContext } from "../../components/Firebase"
-import PostRoll from "../../components/PostRoll"
+import CreateIcon from "@material-ui/icons/Create"
 
-const Write = styled.a`
-  text-decoration: none;
-  color: #808080;
-  color: #808080;
-  &:hover {
-    color: #4c9c41;
-    transition: all 0.4s ease-in;
-  }
-`
-
-const Member = ({ data }) => {
-  const { user, firebase } = useContext(FirebaseContext)
-
+const PostTemplate = props => {
   const router = useRouter()
 
-  // where {router.query.id}
-  const [allMemberPosts = []] = useCollectionData(
-    firebase ? firebase.db.collection("articles") : null,
+  const { user, firebase } = useContext(FirebaseContext)
+
+  const [pageContext = null] = useDocumentDataOnce(
+    router.query.id && firebase
+      ? firebase.db.collection("memberposts").doc(router.query.id)
+      : null,
     { idField: "id" }
   )
 
-  console.log(allMemberPosts)
+  const Container = styled.div`
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 1px solid #f4f4f4;
+  `
 
-  // const allMemberPosts = data.allMemberPost.edges
-  const memberPostsOrdered = allMemberPosts.sort(function (a, b) {
-    if (a.postNum < b.postNum) {
-      return 1
-    } else {
-      return -1
+  const SubContainer = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto 1rem;
+    div {
+      text-align: left;
+      color: #888;
     }
-  })
-  const latestMemberPosts = memberPostsOrdered.slice(0, 10)
-  // const[posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    // const unsubscribe = firebase.subscribeToAllPosts(
-    // onSnapshot: (snapshot) => {
-    //   // console.log(snapshot);
-    //   // const snapshotPosts = [];
-    //   // snapshot.forEach(doc => {
-    //   //   snapshotPosts.push({
-    //   //     id: doc.id,
-    //   //     ...doc.data()
-    //   //   })
-    //   // })
-    //   // setPosts(snapshotPosts);
-    // }
-
-    // )
-
-    return () => {
-      // if(unsubscribe){
-      // unsubscribe();
-      //   firebase.subscribeToAllPosts(r => {
-      //     console.log(r);
-      //   })
-      // // }
+    span {
+      text-align: left;
+      color: #888;
     }
-  }, [])
+    span:before {
+      content: "|";
+      padding: 0 0.5em;
+      font-size: 0.8em;
+      color: #ccc;
+    }
+  `
+
+  const Title = styled.h2`
+    width: 100%;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    color: #02102e;
+    text-align: left;
+    letter-spacing: normal;
+  `
+
+  const Image = styled.img`
+    width: 1.5em;
+    height: 1.5em;
+    text-align: left;
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid 1px;
+    border-color: #eeeeee;
+    margin-bottom: 0;
+    margin-right: 0.2em;
+  `
+
+  const Content = styled.p`
+    margin-top: 1rem;
+  `
+
+  const PostItem = styled.section``
+
+  if (!pageContext) {
+    return <p></p>
+  }
 
   return (
-    <>
-      <section>
-        <PageCover>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050"
-            alt="coverImg"
-          ></img>
-          <p>
-            <span>COMMUNITY</span>
-          </p>
-        </PageCover>
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0 0.8rem 1.45rem`,
-          }}
-        >
-          {latestMemberPosts.map(node => (
-            <PostRoll
-              key={node.id}
-              title={node.title}
-              id={node.id}
-              date={node.date}
-              username={node.username}
-              userPhoto={node.userPhoto}
-              postNum={node.postNum}
-            />
-          ))}
-          <div
-            style={{
-              margin: `1.45rem auto 0 `,
-              textAlign: `center`,
-            }}
-          >
-            {!!user && (
-              <BottomBar>
-                <a
-                  href="/member-write"
-                  style={{
-                    borderRadius: `50%`,
-                    margin: `0 0 0 auto`,
-                    display: `flex`,
-                    alignItems: `center`,
-                  }}
-                >
-                  <CreateIcon
-                    style={{
-                      color: `white`,
-                      backgroundColor: `#4c9c41`,
-                      borderRadius: `50%`,
-                      padding: `0.5rem`,
-                      height: `3rem`,
-                      width: `3rem`,
-                      boxShadow: `rgba(0, 0, 0, 0.4) 0 2px 5px`,
-                    }}
-                  />
-                </a>
-              </BottomBar>
-            )}
-          </div>
-        </div>
-      </section>
-    </>
+    <section>
+      <PageCover>
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050"
+          alt="coverImg"
+        ></img>
+        <p>
+          <span>COMMUNITY</span>
+        </p>
+      </PageCover>
+      <div
+        style={{
+          margin: `0 auto`,
+          maxWidth: 960,
+          padding: `0 1.5rem 1.45rem`,
+        }}
+      >
+        <PostItem>
+          <Container>
+            <Title>{pageContext.title}</Title>
+            <SubContainer>
+              {!!pageContext.userPhoto && (
+                <Image src={pageContext.userPhoto}></Image>
+              )}
+              {!pageContext.userPhoto && (
+                <Image src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2FuserDefaultPic.png?alt=media&token=2e1c678f-910a-4332-a6c5-6d3161aa16e6"></Image>
+              )}
+              <div>{pageContext.username}</div>
+              <span>{pageContext.date}</span>
+            </SubContainer>
+          </Container>
+          <Content>{renderHTML(pageContext.content)}</Content>
+        </PostItem>
+        {!!firebase && (
+          <PostComments firebase={firebase} postId={pageContext.id} />
+        )}
+        {!!user && (
+          <BottomBar>
+            <Link href="/member-write">
+              <CreateIcon
+                style={{
+                  color: `white`,
+                  backgroundColor: `#4c9c41`,
+                  borderRadius: `50%`,
+                  padding: `0.5rem`,
+                  height: `3rem`,
+                  width: `3rem`,
+                  boxShadow: `rgba(0, 0, 0, 0.4) 0 2px 5px`,
+                }}
+              />
+            </Link>
+          </BottomBar>
+        )}
+      </div>
+    </section>
   )
 }
 
-export default Member
+export default PostTemplate

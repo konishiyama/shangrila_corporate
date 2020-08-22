@@ -7,6 +7,9 @@ import { FirebaseContext } from "./Firebase"
 const NavItem = styled.a`
   text-decoration: none;
   color: #111;
+  font-size: 1.5rem;
+  padding: 20px 0;
+  z-index: 6;
   display: inline-block;
   white-space: nowrap;
   margin: 0 1vw;
@@ -33,15 +36,15 @@ const NavItem = styled.a`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     padding: 20px 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
     z-index: 6;
   }
 
-  @media (max-width: 1024px) {
+  @media (min-width: 1024px) {
     padding: 20px 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
     z-index: 6;
   }
 `
@@ -49,6 +52,9 @@ const NavItem = styled.a`
 const Logout = styled.span`
   text-decoration: none;
   color: #111;
+  padding: 20px 0;
+  font-size: 1.5rem;
+  z-index: 6;
   display: inline-block;
   white-space: nowrap;
   margin: 0 1vw;
@@ -76,15 +82,15 @@ const Logout = styled.span`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     padding: 20px 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
     z-index: 6;
   }
 
-  @media (max-width: 1024px) {
+  @media (min-width: 1024px) {
     padding: 20px 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
     z-index: 6;
   }
 `

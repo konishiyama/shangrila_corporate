@@ -49,7 +49,7 @@ class Firebase {
     return this.db.collection("memberposts").get()
   }
 
-  async register({ email, password, username }) {
+  async register({ email, password, username, photoURL }) {
     const newUser = await this.auth.createUserWithEmailAndPassword(
       email,
       password
@@ -58,6 +58,7 @@ class Firebase {
     return this.db.collection("publicProfiles").doc(username).set({
       userId: newUser.user.uid,
       Email: newUser.user.email,
+      photoURL: photoURL,
     })
   }
 

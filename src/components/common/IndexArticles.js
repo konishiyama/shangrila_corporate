@@ -26,12 +26,6 @@ export const IndexArticles = ({ firebase }) => {
     slidesToShow: 4,
     overflow: false,
     responsive: [
-      // {
-      //   breakpoint: 1500,
-      //   settings: {
-      //     slidesToShow: 4,
-      //   }
-      // },
       {
         breakpoint: 1025,
         settings: {

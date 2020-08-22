@@ -1,3 +1,4 @@
+import Link from "next/link"
 import React, { useContext } from "react"
 import styled from "styled-components"
 import { Container, ProfileImage2, SubTitle } from "../components/common"
@@ -5,13 +6,6 @@ import { FirebaseContext } from "../components/Firebase"
 
 const TD = styled.td`
   word-break: break-all;
-`
-
-const PhotoLink = styled.a`
-  &:hover {
-    opacity: 50%;
-    cursor: pointer;
-  }
 `
 
 const Profile = () => {
@@ -26,14 +20,14 @@ const Profile = () => {
           <span>PROFILE</span>
         </SubTitle>
         {!!user && !!user.photoURL && (
-          <PhotoLink href="/profile-edit">
+          <Link href="/profile-edit">
             <ProfileImage2 src={user.photoURL}></ProfileImage2>
-          </PhotoLink>
+          </Link>
         )}
         {!!user && !user.photoURL && (
-          <a href="/profile-edit">
+          <Link href="/profile-edit">
             <ProfileImage2 src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2FuserDefaultPic.png?alt=media&token=2e1c678f-910a-4332-a6c5-6d3161aa16e6"></ProfileImage2>
-          </a>
+          </Link>
         )}
         <br></br>
         <br></br>

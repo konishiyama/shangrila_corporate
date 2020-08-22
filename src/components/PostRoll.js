@@ -22,6 +22,10 @@ const EachPost = styled.div`
 // const PostLink = styled.a`
 // `
 
+const A = styled.a`
+  text-decoration: none;
+`
+
 const Container = styled.div`
   width: 100%;
   text-align: center;
@@ -32,6 +36,7 @@ const SubContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  text-decoration: none;
   margin: 0 auto;
   div {
     text-align: left;
@@ -76,19 +81,19 @@ const PostRoll = props => {
     <>
       <EachPost>
         <Link as={`/member/${props.id}`} href={"/member/[id]"}>
-          <a>
+          <A>
             <Container>
               <Title>{props.title}</Title>
               <SubContainer>
-                {!!props.userPhoto && <img src={props.userPhoto}></img>}
+                {!!props.userPhoto && <Image src={props.userPhoto}></Image>}
                 {!props.userPhoto && (
-                  <img src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2FuserDefaultPic.png?alt=media&token=2e1c678f-910a-4332-a6c5-6d3161aa16e6"></img>
+                  <Image src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2FuserDefaultPic.png?alt=media&token=2e1c678f-910a-4332-a6c5-6d3161aa16e6"></Image>
                 )}
                 <div>{props.username}</div>
                 <span>{props.date}</span>
               </SubContainer>
             </Container>
-          </a>
+          </A>
         </Link>
       </EachPost>
     </>

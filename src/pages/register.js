@@ -10,6 +10,8 @@ import {
   SmallP,
   SubIndex,
   Title,
+  UploadButton,
+  Message,
 } from "../components/common"
 // import { FirebaseContext} from '../components/Firebase'
 import { FirebaseContext } from "../components/Firebase"
@@ -34,6 +36,10 @@ const Register = () => {
     confirmPassword: "",
     username: "",
   })
+  const [fileErrorMessage, setFileErrorMessage] = useState("")
+  const [fileUploaded, setFileUploaded] = useState("")
+  const [image, setImage] = useState("")
+  const [imageUrl, setImageUrl] = useState("")
 
   const router = useRouter()
 
@@ -55,7 +61,7 @@ const Register = () => {
           username: formValues.username,
           email: formValues.email,
           password: formValues.password,
-          // photoURL: PimageUrl
+          photoURL: imageUrl,
         })
         .then(() => router.push("/"))
         .catch(error => {
@@ -66,12 +72,58 @@ const Register = () => {
     }
   }
 
+  function onSubmitFile(e) {
+    e.preventDefault()
+    if (image === "") {
+      setFileErrorMessage("Error File Uploading!")
+    }
+    firebase.storage
+      .ref(`/images/${image.name}`)
+      .put(image)
+      .then(complete, setFileErrorMessage(""), setFileUploaded("File Uploaded"))
+      .catch(error => {
+        setFileErrorMessage(error.message)
+      })
+  }
+
+  function complete() {
+    firebase.storage
+      .ref("images")
+      .child(image.name)
+      .getDownloadURL()
+      .then(fireBaseUrl => {
+        setImageUrl(fireBaseUrl)
+      })
+  }
+
+  function handleImage(e) {
+    const image = e.target.files[0]
+    setImage(image)
+  }
+
   return (
     <section>
       <br></br>
       <br></br>
       <FormContainer>
         <Title>SIGN UP</Title>
+        <br></br>
+        <Form required onSubmit={onSubmitFile}>
+          <SubIndex>PROFILE IMAGE</SubIndex>
+          <input
+            type="file"
+            onChange={handleImage}
+            style={{
+              marginBottom: `1vw`,
+            }}
+          />
+          <br></br>
+          <UploadButton>Upload</UploadButton>
+          {!!fileUploaded && <Message>Uploaded image properly!</Message>}
+          {!!fileErrorMessage && (
+            <ErrorMessage>You need to uploaded image!</ErrorMessage>
+          )}
+        </Form>
         <br></br>
         <Form onSubmit={handleSubmit}>
           <SubIndex>USERNAME</SubIndex>

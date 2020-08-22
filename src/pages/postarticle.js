@@ -1,5 +1,5 @@
 import { Editor } from "@tinymce/tinymce-react"
-import { navigate } from "gatsby"
+// import { navigate } from "gatsby"
 import React, { useContext, useState } from "react"
 import {
   Button,
@@ -27,18 +27,17 @@ const PostArticle = ({ data }) => {
 
   function handleSubmit(e) {
     e.preventDefault()
-    firebase
-      .postArticle({
-        title: titleValues.title,
-        content: contentValues.content,
-        cover: imageUrl,
-        date: timeStamp,
-        articleNum: articleNumber,
-      })
-      .then(() => navigate("/"))
-      .catch(error => {
-        setErrorMessage(error.message)
-      })
+    firebase.postArticle({
+      title: titleValues.title,
+      content: contentValues.content,
+      cover: imageUrl,
+      date: timeStamp,
+      articleNum: articleNumber,
+    })
+    // .then(() => navigate("/"))
+    // .catch(error => {
+    //   setErrorMessage(error.message)
+    // })
   }
 
   function handleInputTitleChange(e) {
@@ -58,7 +57,6 @@ const PostArticle = ({ data }) => {
       content: e.target.getContent(),
     })
     setTimeStamp(new Date().toLocaleDateString())
-    console.log(user)
   }
 
   function onSubmitFile(e) {
@@ -142,7 +140,7 @@ const PostArticle = ({ data }) => {
                 "insertdatetime media table paste wordcount",
               ],
               toolbar:
-                "undo redo | formatselect | bold italic | \
+                "undo redo | formatselect | forecolor | bold italic underline | \
               alignleft aligncenter alignright | \
               bullist numlist outdent indent | help",
             }}

@@ -8,6 +8,7 @@ const EachPost = styled.div`
   width: 100%;
   text-decoration: none;
   border-bottom: 1px solid #f4f4f4;
+  overflow-x: hidden;
   &:hover {
     cursor: pointer;
     background-color: #f4f9ef;
@@ -80,7 +81,7 @@ const Image = styled.img`
 const PostRoll = props => {
   return (
     <>
-      <Fade right duration={800}>
+      <Fade right duration={800} distance="30px">
         <EachPost>
           <Link as={`/member/${props.id}`} href={"/member/[id]"}>
             <A>

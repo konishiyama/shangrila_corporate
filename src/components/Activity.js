@@ -68,7 +68,7 @@ const Activity = () => {
           <Small>サツマイモを中心とした</Small>
           <Small>露地栽培作物を生産します</Small>
         </Fade>
-        <Fade bottom duration={1500} distance="100px">
+        <Fade right duration={1500} distance="50px">
           <ImgContainer>
             <Img src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050"></Img>
           </ImgContainer>
@@ -86,7 +86,7 @@ const Activity = () => {
           <Small>生産した農作物を</Small>
           <Small>ECサイト等を通じて、一般販売します</Small>
         </Fade>
-        <Fade right bottm={1500} distance="100px">
+        <Fade right duration={1500} distance="50px">
           <ImgContainer>
             <Img src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050"></Img>
           </ImgContainer>
@@ -103,7 +103,7 @@ const Activity = () => {
           <Small>農作物栽培に関するブログを作成し、</Small>
           <Small>定期的に発信します</Small>
         </Fade>
-        <Fade bottom duration={1500} distance="100px">
+        <Fade right duration={1500} distance="50px">
           <ImgContainer>
             <Img src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050"></Img>
           </ImgContainer>

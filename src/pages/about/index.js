@@ -48,7 +48,8 @@ const A = styled.a`
   margin-top: 1em;
   &:hover {
     color: #fff;
-    background-color: #4c9c41;
+    background-color: #a9ce84;
+    border: solid 1px #a9ce84;
     transition: all 0.2s ease-in;
   }
 `
@@ -79,7 +80,7 @@ const About = props => {
               <h3>代表メッセージ</h3>
               <P>
                 代表
-                山口翔平から皆様へのメッセージと、法人設立にかけた想いについて、ご紹介しています。
+                山口翔平から皆様へのメッセージと、法人設立にかけた想いについて、お伝えしています。
               </P>
               <LinkP>
                 <A href="/about/message">詳しくはこちら</A>

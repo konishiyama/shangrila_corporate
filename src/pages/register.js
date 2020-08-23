@@ -106,10 +106,10 @@ const Register = () => {
       <br></br>
       <br></br>
       <FormContainer>
-        <Title>SIGN UP</Title>
+        <Title>会員登録</Title>
         <br></br>
         <Form required onSubmit={onSubmitFile}>
-          <SubIndex>PROFILE IMAGE</SubIndex>
+          <SubIndex>プロフィール画像</SubIndex>
           <input
             type="file"
             onChange={handleImage}
@@ -118,15 +118,17 @@ const Register = () => {
             }}
           />
           <br></br>
-          <UploadButton>Upload</UploadButton>
-          {!!fileUploaded && <Message>Uploaded image properly!</Message>}
+          <UploadButton>送信</UploadButton>
+          {!!fileUploaded && <Message>イメージの送信に成功しました！</Message>}
           {!!fileErrorMessage && (
-            <ErrorMessage>You need to uploaded image!</ErrorMessage>
+            <ErrorMessage>
+              イメージを選択した後、送信を押してください！
+            </ErrorMessage>
           )}
         </Form>
         <br></br>
         <Form onSubmit={handleSubmit}>
-          <SubIndex>USERNAME</SubIndex>
+          <SubIndex>ユーザー名</SubIndex>
           <Input
             onChange={handleInputChange}
             value={formValues.username}
@@ -144,7 +146,7 @@ const Register = () => {
             required
             name="email"
           />
-          <SubIndex>PASSWORD</SubIndex>
+          <SubIndex>パスワード</SubIndex>
           <Input
             onChange={handleInputChange}
             value={formValues.password}
@@ -154,7 +156,7 @@ const Register = () => {
             minLength={6}
             name="password"
           />
-          <SubIndex>CONFIRM PASSWORD</SubIndex>
+          <SubIndex>確認用パスワード</SubIndex>
           <Input
             onChange={handleInputChange}
             value={formValues.confirmPassword}
@@ -166,24 +168,30 @@ const Register = () => {
           />
           {!!errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
           <br></br>
-          <Button type="submit" block>
-            Send
+          <Button
+            type="submit"
+            block
+            style={{
+              fontSize: `14px`,
+            }}
+          >
+            利用規約に同意して会員登録
           </Button>
         </Form>
         <br></br>
         <SmallP>
           <p>
-            Read
+            サイト利用規約は
             <A href="/terms" target="_blank">
               {" "}
-              Terms and Conditions
+              こちら
             </A>
           </p>
         </SmallP>
         <SmallP>
           <p>
-            Already a member?
-            <A to="/"> Login</A>
+            会員登録がお済みの場合は
+            <A to="/">ログイン</A>
           </p>
         </SmallP>
         <br />

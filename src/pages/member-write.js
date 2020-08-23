@@ -6,7 +6,7 @@ import {
   ErrorMessage,
   Form,
   Input,
-  PageCover,
+  PageTitle,
   SubIndex,
 } from "../components/common"
 import { FirebaseContext } from "../components/Firebase"
@@ -64,17 +64,12 @@ const MemberWrite = ({ data }) => {
 
   return (
     <section>
-      <PageCover>
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcover-photo2.jpg?alt=media&token=2e15a9eb-c440-484d-8029-96daabdab65f"
-          alt="image"
-        ></img>
-        <p>
-          <span>WRITE</span>
-        </p>
-      </PageCover>
+      <PageTitle>
+        <span>掲示板投稿</span>
+        <p>Write</p>
+      </PageTitle>
       <Form onSubmit={handleSubmit}>
-        <SubIndex>TITLE</SubIndex>
+        <SubIndex>タイトル</SubIndex>
         <Input
           required
           placeholder="title"
@@ -82,7 +77,7 @@ const MemberWrite = ({ data }) => {
           onChange={handleInputTitleChange}
         />
         <br></br>
-        <SubIndex>CONTENT</SubIndex>
+        <SubIndex>投稿内容</SubIndex>
         <div className="App">
           <Editor
             init={{
@@ -107,7 +102,7 @@ const MemberWrite = ({ data }) => {
         {!!errorMessage && <ErrorMessage>Failed posting</ErrorMessage>}
         <br></br>
         <Button type="submit" block>
-          Write
+          投稿する
         </Button>
       </Form>
       <br />

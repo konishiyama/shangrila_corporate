@@ -57,7 +57,7 @@ const Login = () => {
       <br></br>
       <br></br>
       <FormContainer>
-        <Title>LOGIN</Title>
+        <Title>ログイン</Title>
         <Form onSubmit={handleSubmit}>
           <SubIndex>EMAIL</SubIndex>
           <Input
@@ -68,7 +68,7 @@ const Login = () => {
             type="email"
             onChange={handleInputChange}
           />
-          <SubIndex>PASSWORD</SubIndex>
+          <SubIndex>パスワード</SubIndex>
           <Input
             required
             placeholder="password"
@@ -85,18 +85,18 @@ const Login = () => {
           <div
             style={{
               display: `flex`,
-              marginBottom: `20px`,
+              marginBottom: `10px`,
               marginTop: `20px`,
             }}
           >
-            <CheckBox type="checkbox" />
+            {/* <CheckBox type="checkbox" />
             <span
               style={{
                 paddingLeft: `4px`,
               }}
             >
               Remember Password
-            </span>
+            </span> */}
           </div>
           <Button type="submit" block>
             Login
@@ -123,14 +123,14 @@ const Login = () => {
         <br />
         <SmallP>
           <p>
-            Forgot
-            <A href="/"> Password?</A>
+            <A href="/register">パスワード</A>
+            をお忘れですか？
           </p>
         </SmallP>
         <SmallP>
           <p>
-            Not a member?
-            <A href="/register"> Sign up now</A>
+            会員登録は
+            <A href="/register">こちら</A>
           </p>
         </SmallP>
         <br />

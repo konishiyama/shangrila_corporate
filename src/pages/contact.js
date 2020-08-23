@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Button, Form, Input, PageCover, SubIndex } from "../components/common"
+import { Button, Form, Input, PageTitle, SubIndex } from "../components/common"
 // import { FirebaseContext} from '../components/Firebase'
 // import { Editor } from '@tinymce/tinymce-react';
 
@@ -20,15 +20,10 @@ const Contact = () => {
   return (
     <>
       <section>
-        <PageCover>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050"
-            alt="coverImg"
-          ></img>
-          <p>
-            <span>CONTACT</span>
-          </p>
-        </PageCover>
+        <PageTitle>
+          <span>お問合せ</span>
+          <p>Contact</p>
+        </PageTitle>
         <Form
           name="contact"
           method="post"

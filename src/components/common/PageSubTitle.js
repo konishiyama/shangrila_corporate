@@ -1,23 +1,23 @@
 import styled from "styled-components"
 
-export const SubTitle = styled.div`
-  margin: 4rem auto 3rem;
+export const PageSubTitle = styled.div`
+  margin: 3rem auto 1.5rem;
   text-align: center;
 
   span {
     font-family: Avenir Next Condensed;
-    font-weight: 200;
+    font-weight: 100;
     letter-spacing: 0.03em;
-    font-size: 25px;
+    font-size: 17px;
     color: #444444;
     margin: 0 auto;
   }
   span:after {
     content: "";
     display: block;
-    height: 1px;
-    width: 20vw;
-    margin: 1.5rem auto 0;
+    height: 1.8px;
+    width: 13vw;
+    margin: 0.8rem auto 0;
     background-color: #4c9c41;
   }
 `

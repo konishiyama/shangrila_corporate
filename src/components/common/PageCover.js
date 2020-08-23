@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const PageCover = styled.div`
-  max-height: 80%;
+  max-height: 100%;
   background-color: white;
   position: relative;
   margin-bottom: 1rem;

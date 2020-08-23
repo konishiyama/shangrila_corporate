@@ -5,6 +5,7 @@ import Fade from "react-reveal/Fade"
 const Container = styled.div`
   text-align: center;
   margin: 0 auto 4rem;
+  overflow: hidden;
 `
 
 const TitleContainer = styled.div`

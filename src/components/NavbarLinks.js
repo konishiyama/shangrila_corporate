@@ -110,7 +110,7 @@ const NavbarLinks = () => {
   return (
     <>
       <Link href="/about">
-        <NavItem>法人概要</NavItem>
+        <NavItem>団体情報</NavItem>
       </Link>
       <Link href="/blog">
         <NavItem>ブログ</NavItem>

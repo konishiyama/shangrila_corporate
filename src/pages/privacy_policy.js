@@ -1,19 +1,14 @@
 import React from "react"
-import { PageCover, BodyText } from "../components/common"
+import { PageTitle, BodyText } from "../components/common"
 
 const Privacy = props => {
   return (
     <>
       <section>
-        <PageCover>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample4.jpg?alt=media&token=05feeaeb-7485-4dc6-a470-6be86d173842"
-            alt="coverImg"
-          ></img>
-          <p>
-            <span>PRIVACY</span>
-          </p>
-        </PageCover>
+        <PageTitle>
+          <span>プライバシーポリシー</span>
+          <p>Privacy Policy</p>
+        </PageTitle>
         <div
           style={{
             margin: `0 auto`,

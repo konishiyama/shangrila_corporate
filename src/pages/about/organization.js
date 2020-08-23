@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { PageTitle, PageSubTitle, BodyText } from "../../components/common"
+import { PageTitle } from "../../components/common"
 
 const TH = styled.th`
   font-size: 12px;
@@ -29,17 +29,14 @@ const TdContainer = styled.div`
   text-align: justify;
 `
 
-const Company = props => {
+const Organization = props => {
   return (
     <>
       <section>
         <PageTitle>
-          <span>法人概要</span>
-          <p>Company Profile</p>
+          <span>団体概要</span>
+          <p>Profile</p>
         </PageTitle>
-        {/* <PageSubTitle>
-          <span>概要</span>
-        </PageSubTitle> */}
         <div
           style={{
             margin: `0 auto`,
@@ -107,4 +104,4 @@ const Company = props => {
   )
 }
 
-export default Company
+export default Organization

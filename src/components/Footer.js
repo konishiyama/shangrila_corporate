@@ -149,8 +149,8 @@ const Footer = () => {
 
         <Paragraph2>
           <Line>
-            <Link href="/about/company">
-              <a>法人概要</a>
+            <Link href="/about/organization">
+              <a>団体概要</a>
             </Link>
           </Line>
           {/* <Span></Span> */}
@@ -160,7 +160,6 @@ const Footer = () => {
             </Link>
           </Line>
         </Paragraph2>
-
         <CopyRight>
           Copyright © 2020 Shohei Yamaguchi All Rights Reserved.
         </CopyRight>

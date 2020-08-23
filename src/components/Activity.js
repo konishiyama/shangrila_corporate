@@ -12,6 +12,7 @@ const TitleContainer = styled.div`
   display: flex;
   align-items: baseline;
   margin-bottom: 1.5rem;
+  padding-top: 0.5rem;
 `
 
 const Cap = styled.span`

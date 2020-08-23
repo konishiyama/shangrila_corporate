@@ -5,7 +5,7 @@ import { PageTitle, BodyText } from "../../components/common"
 import Fade from "react-reveal/Fade"
 
 const Container = styled.div`
-  margin: 0 auto 3rem;
+  margin: 0 auto 5rem;
   max-width: 480px;
 `
 
@@ -96,10 +96,10 @@ const About = props => {
               </Pic>
               <h3>団体概要</h3>
               <P>
-                NPO法人Imolutionの事業・活動内容等、団体概要についてご覧いただけます。
+                NPO法人Imolutionの事業・活動内容等についてご覧いただけます。
               </P>
               <LinkP>
-                <A href="/about/company">詳しくはこちら</A>
+                <A href="/about/organization">詳しくはこちら</A>
               </LinkP>
             </Fade>
           </Container>

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const SubTitle = styled.div`
-  margin: 4rem auto 3rem;
+  margin: 5rem auto 3.5rem;
   text-align: center;
 
   span {

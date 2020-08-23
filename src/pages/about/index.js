@@ -2,6 +2,7 @@ import React from "react"
 import Link from "next/link"
 import styled from "styled-components"
 import { PageTitle, BodyText } from "../../components/common"
+import Fade from "react-reveal/Fade"
 
 const Container = styled.div`
   margin: 0 auto 3rem;
@@ -68,50 +69,56 @@ const About = props => {
           }}
         >
           <Container>
-            <Pic>
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fprofile_pic_height_optimized.jpg?alt=media&token=57bae787-a0e7-4735-a436-347e5f6123b4"
-                alt="coverImg"
-              ></img>
-            </Pic>
-            <h3>代表メッセージ</h3>
-            <P>
-              代表
-              山口翔平から皆様へのメッセージと、法人設立にかけた想いについて、ご紹介しています。
-            </P>
-            <LinkP>
-              <A href="/about/message">詳しくはこちら</A>
-            </LinkP>
+            <Fade cascade duration={2500}>
+              <Pic>
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fprofile_pic_height_optimized.jpg?alt=media&token=57bae787-a0e7-4735-a436-347e5f6123b4"
+                  alt="coverImg"
+                ></img>
+              </Pic>
+              <h3>代表メッセージ</h3>
+              <P>
+                代表
+                山口翔平から皆様へのメッセージと、法人設立にかけた想いについて、ご紹介しています。
+              </P>
+              <LinkP>
+                <A href="/about/message">詳しくはこちら</A>
+              </LinkP>
+            </Fade>
           </Container>
           <Container>
-            <Pic>
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fprofile_pic_height_optimized.jpg?alt=media&token=57bae787-a0e7-4735-a436-347e5f6123b4"
-                alt="coverImg"
-              ></img>
-            </Pic>
-            <h3>法人概要</h3>
-            <P>
-              NPO法人Imolutionの事業・活動内容等、法人概要についてご覧いただけます。
-            </P>
-            <LinkP>
-              <A href="/about/company">詳しくはこちら</A>
-            </LinkP>
+            <Fade cascade duration={2500}>
+              <Pic>
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fprofile_pic_height_optimized.jpg?alt=media&token=57bae787-a0e7-4735-a436-347e5f6123b4"
+                  alt="coverImg"
+                ></img>
+              </Pic>
+              <h3>法人概要</h3>
+              <P>
+                NPO法人Imolutionの事業・活動内容等、法人概要についてご覧いただけます。
+              </P>
+              <LinkP>
+                <A href="/about/company">詳しくはこちら</A>
+              </LinkP>
+            </Fade>
           </Container>
           <Container>
-            <Pic>
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fprofile_pic_height_optimized.jpg?alt=media&token=57bae787-a0e7-4735-a436-347e5f6123b4"
-                alt="coverImg"
-              ></img>
-            </Pic>
-            <h3>設立理念</h3>
-            <P>
-              本法人設立の趣旨や、運営する上での理念、目的等についてご紹介しています。
-            </P>
-            <LinkP>
-              <A href="/about/vision">詳しくはこちら</A>
-            </LinkP>
+            <Fade cascade duration={2500}>
+              <Pic>
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fprofile_pic_height_optimized.jpg?alt=media&token=57bae787-a0e7-4735-a436-347e5f6123b4"
+                  alt="coverImg"
+                ></img>
+              </Pic>
+              <h3>設立理念</h3>
+              <P>
+                本法人設立の趣旨や、運営する上での理念、目的等についてご紹介しています。
+              </P>
+              <LinkP>
+                <A href="/about/vision">詳しくはこちら</A>
+              </LinkP>
+            </Fade>
           </Container>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import React from "react"
 import { useCollectionData } from "react-firebase-hooks/firestore"
-import PostRoll from "../PostRoll"
+import PostRoll from "../../PostRoll"
 
 export const MemberPosts = ({ firebase }) => {
   // const [memberPosts, setMemberPosts] = useState([])

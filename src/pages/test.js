@@ -6,20 +6,10 @@ import Zoom from "react-reveal/Zoom" // Importing Zoom effect
 import Reveal from "react-reveal/Reveal"
 import Fade from "react-reveal/Fade"
 
-const CoverPic = styled.img`
-  margin: 0;
-  width: 100%;
-  padding: 0 0 0;
-  height: 630px;
-  object-fit: cover;
-
-  @media (min-width: 768px) {
-    height: 400px;
-  }
-
-  @media (min-width: 1024px) {
-    height: 630px;
-  }
+const CoverPic = styled.div`
+  background: linear-gradient( 135deg, rgba(246, 255, 0, 0.8), rgba(255, 0, 161, 0.8)),
+  background: url(https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample7.jpg?alt=media&token=85fc967d-5da8-4903-8d34-a01f5aa69d65);
+  background-size: cover;
 `
 
 const Test = props => {
@@ -35,9 +25,7 @@ const Test = props => {
             padding: `0 0.8rem 1.45rem`,
           }}
         ></div>
-        <Reveal effect="fadeInUp">
-          <CoverPic src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcover-photo2.jpg?alt=media&token=2e15a9eb-c440-484d-8029-96daabdab65f" />
-        </Reveal>
+        <CoverPic />
         <div>
           <Fade bottom duration={3000}>
             <p>

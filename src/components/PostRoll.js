@@ -81,25 +81,25 @@ const Image = styled.img`
 const PostRoll = props => {
   return (
     <>
-      <Fade right duration={800} delay={1000} distance="50px">
-        <EachPost>
-          <Link as={`/member/${props.id}`} href={"/member/[id]"}>
-            <A>
-              <Container>
-                <Title>{props.title}</Title>
-                <SubContainer>
-                  {!!props.userPhoto && <Image src={props.userPhoto}></Image>}
-                  {!props.userPhoto && (
-                    <Image src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2FuserDefaultPic.png?alt=media&token=2e1c678f-910a-4332-a6c5-6d3161aa16e6"></Image>
-                  )}
-                  <div>{props.username}</div>
-                  <span>{props.date}</span>
-                </SubContainer>
-              </Container>
-            </A>
-          </Link>
-        </EachPost>
-      </Fade>
+      {/* <Fade right duration={800} delay={1000} distance="50px"> */}
+      <EachPost>
+        <Link as={`/member/${props.id}`} href={"/member/[id]"}>
+          <A>
+            <Container>
+              <Title>{props.title}</Title>
+              <SubContainer>
+                {!!props.userPhoto && <Image src={props.userPhoto}></Image>}
+                {!props.userPhoto && (
+                  <Image src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2FuserDefaultPic.png?alt=media&token=2e1c678f-910a-4332-a6c5-6d3161aa16e6"></Image>
+                )}
+                <div>{props.username}</div>
+                <span>{props.date}</span>
+              </SubContainer>
+            </Container>
+          </A>
+        </Link>
+      </EachPost>
+      {/* </Fade> */}
     </>
   )
 }

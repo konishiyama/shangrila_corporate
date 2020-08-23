@@ -7,8 +7,8 @@ import {
   CommentImage,
   CommentItemContainer,
   TextArea,
-} from "../common"
-import { FirebaseContext } from "../Firebase"
+} from ".."
+import { FirebaseContext } from "../../Firebase"
 // import moment from 'moment';
 
 const CommentForm = styled.form`

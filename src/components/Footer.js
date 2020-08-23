@@ -149,8 +149,8 @@ const Footer = () => {
 
         <Paragraph2>
           <Line>
-            <Link href="/contact">
-              <a>お問い合わせ</a>
+            <Link href="/about/company">
+              <a>法人概要</a>
             </Link>
           </Line>
           {/* <Span></Span> */}

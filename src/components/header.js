@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { LoginImage, ProfileImage } from "../components/common"
 import { FirebaseContext } from "./Firebase"
 import NavbarLinks from "./NavbarLinks"
+import ExitToAppRoundedIcon from "@material-ui/icons/ExitToAppRounded"
 
 const Navigation = styled.nav`
   height: 10vh;
@@ -178,7 +179,11 @@ const Header = () => {
                   alignItems: `center`,
                 }}
               >
-                <LoginImage src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fsign-in-alt-solid.svg?alt=media&token=8de85d0f-7cba-4ce5-a246-44a839597ea0"></LoginImage>
+                <ExitToAppRoundedIcon
+                  style={{
+                    color: `#02102e`,
+                  }}
+                ></ExitToAppRoundedIcon>
               </a>
             </Link>
           </div>

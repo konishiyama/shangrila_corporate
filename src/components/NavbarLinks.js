@@ -7,7 +7,9 @@ import { FirebaseContext } from "./Firebase"
 const NavItem = styled.a`
   text-decoration: none;
   color: #111;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-family: "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro",
+    "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, serif;
   padding: 20px 0;
   z-index: 6;
   display: inline-block;
@@ -38,13 +40,13 @@ const NavItem = styled.a`
 
   @media (min-width: 768px) {
     padding: 20px 0;
-    font-size: 1rem;
+    font-size: 0.7rem;
     z-index: 6;
   }
 
   @media (min-width: 1024px) {
     padding: 20px 0;
-    font-size: 1rem;
+    font-size: 0.8rem;
     z-index: 6;
   }
 `
@@ -53,7 +55,9 @@ const Logout = styled.span`
   text-decoration: none;
   color: #111;
   padding: 20px 0;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-family: "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro",
+    "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, serif;
   z-index: 6;
   display: inline-block;
   white-space: nowrap;
@@ -84,13 +88,13 @@ const Logout = styled.span`
 
   @media (min-width: 768px) {
     padding: 20px 0;
-    font-size: 1rem;
+    font-size: 0.5rem;
     z-index: 6;
   }
 
   @media (min-width: 1024px) {
     padding: 20px 0;
-    font-size: 1rem;
+    font-size: 0.8rem;
     z-index: 6;
   }
 `
@@ -106,25 +110,25 @@ const NavbarLinks = () => {
   return (
     <>
       <Link href="/about">
-        <NavItem>About</NavItem>
+        <NavItem>法人概要</NavItem>
       </Link>
       <Link href="/blog">
-        <NavItem>Blog</NavItem>
+        <NavItem>ブログ</NavItem>
       </Link>
       {/* <NavItem href="/contact">Contact</NavItem> */}
       {!user && (
         <Link href="/login">
-          <NavItem>Login</NavItem>
+          <NavItem>ログイン</NavItem>
         </Link>
       )}
       {!!user && !!user.admin && (
         <Link href="/postarticle">
-          <NavItem>Post</NavItem>
+          <NavItem>記事投稿</NavItem>
         </Link>
       )}
       {!!user && (
         <Link href="/member">
-          <NavItem>Community</NavItem>
+          <NavItem>会員掲示板</NavItem>
         </Link>
       )}
       {!!user && <Logout onClick={handleLogOutClick}>Logout</Logout>}

@@ -58,7 +58,7 @@ const About = props => {
     <>
       <section>
         <PageTitle>
-          <span>法人情報</span>
+          <span>団体情報</span>
           <p>About</p>
         </PageTitle>
         <div
@@ -94,9 +94,9 @@ const About = props => {
                   alt="coverImg"
                 ></img>
               </Pic>
-              <h3>法人概要</h3>
+              <h3>団体概要</h3>
               <P>
-                NPO法人Imolutionの事業・活動内容等、法人概要についてご覧いただけます。
+                NPO法人Imolutionの事業・活動内容等、団体概要についてご覧いただけます。
               </P>
               <LinkP>
                 <A href="/about/company">詳しくはこちら</A>

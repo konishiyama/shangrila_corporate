@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
 
   return (
     <FirebaseContext.Provider value={{ user, firebase, loading }}>
-      {!!firebase && <Header />}
+      <Header />
       <main>{children}</main>
       <Footer />
     </FirebaseContext.Provider>

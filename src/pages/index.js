@@ -23,96 +23,94 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      {!!firebase && (
-        <section>
-          <TopCover></TopCover>
-          <div
-            style={{
-              margin: `0 auto`,
-              maxWidth: 960,
-              padding: `5rem 1.5rem 0rem`,
-            }}
-          >
-            <Declaration></Declaration>
-            <Fade bottom duration={1500}>
-              <SubTitle>
-                <span>活動内容</span>
-              </SubTitle>
-            </Fade>
-            <Activity></Activity>
-          </div>
-          <div
-            style={{
-              margin: `0 auto`,
-              maxWidth: 960,
-              padding: `0rem 0.8rem 0`,
-            }}
-          >
-            {!!user && (
-              <div>
-                <Fade bottom duration={1500}>
-                  <SubTitle>
-                    <span>コミュニティー</span>
-                  </SubTitle>
-                </Fade>
-                <Fade duration={2500}>
-                  {!!firebase && <IndexMemberPosts firebase={firebase} />}
-                </Fade>
-                <div
-                  style={{
-                    margin: `2.5rem auto 0 `,
-                    textAlign: `center`,
-                  }}
-                >
-                  <Fade bottom duration={1500}>
-                    <SeeMore href="/member">{">>もっと見る"}</SeeMore>
-                  </Fade>
-                </div>
-              </div>
-            )}
-          </div>
+      <section>
+        <TopCover></TopCover>
+        <div
+          style={{
+            margin: `0 auto`,
+            maxWidth: 960,
+            padding: `5rem 1.5rem 0rem`,
+          }}
+        >
+          <Declaration></Declaration>
           <Fade bottom duration={1500}>
             <SubTitle>
-              <span>最新の記事</span>
+              <span>活動内容</span>
             </SubTitle>
           </Fade>
-          <Fade duration={1500}>
-            {!!firebase && <IndexArticles firebase={firebase} />}
-          </Fade>
-          <div
-            style={{
-              margin: `0 auto`,
-              maxWidth: 960,
-              padding: `0 1.5rem 0`,
-            }}
-          >
-            <div
-              style={{
-                margin: `2.5rem auto 0 `,
-                textAlign: `center`,
-              }}
-            >
+          <Activity></Activity>
+        </div>
+        <div
+          style={{
+            margin: `0 auto`,
+            maxWidth: 960,
+            padding: `0rem 0.8rem 0`,
+          }}
+        >
+          {!!user && (
+            <div>
               <Fade bottom duration={1500}>
-                <SeeMore href="/blog">{">>もっと見る"}</SeeMore>
+                <SubTitle>
+                  <span>コミュニティー</span>
+                </SubTitle>
               </Fade>
+              <Fade duration={2500}>
+                {!!firebase && <IndexMemberPosts firebase={firebase} />}
+              </Fade>
+              <div
+                style={{
+                  margin: `2.5rem auto 0 `,
+                  textAlign: `center`,
+                }}
+              >
+                <Fade bottom duration={1500}>
+                  <SeeMore href="/member">{">>もっと見る"}</SeeMore>
+                </Fade>
+              </div>
             </div>
-          </div>
-          <Fade bottom duration={1500}>
-            <SubTitle>
-              <span>お問合せ</span>
-            </SubTitle>
-          </Fade>
+          )}
+        </div>
+        <Fade bottom duration={1500}>
+          <SubTitle>
+            <span>最新の記事</span>
+          </SubTitle>
+        </Fade>
+        <Fade duration={1500}>
+          {!!firebase && <IndexArticles firebase={firebase} />}
+        </Fade>
+        <div
+          style={{
+            margin: `0 auto`,
+            maxWidth: 960,
+            padding: `0 1.5rem 0`,
+          }}
+        >
           <div
             style={{
-              margin: `0 auto`,
-              maxWidth: 960,
-              padding: `0rem 0.8rem 1.45rem`,
+              margin: `2.5rem auto 0 `,
+              textAlign: `center`,
             }}
           >
-            <Contact></Contact>
+            <Fade bottom duration={1500}>
+              <SeeMore href="/blog">{">>もっと見る"}</SeeMore>
+            </Fade>
           </div>
-        </section>
-      )}
+        </div>
+        <Fade bottom duration={1500}>
+          <SubTitle>
+            <span>お問合せ</span>
+          </SubTitle>
+        </Fade>
+        <div
+          style={{
+            margin: `0 auto`,
+            maxWidth: 960,
+            padding: `0rem 0.8rem 1.45rem`,
+          }}
+        >
+          <Contact></Contact>
+        </div>
+      </section>
     </>
   )
 }

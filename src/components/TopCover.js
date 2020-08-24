@@ -122,20 +122,22 @@ const TopCover = () => {
           <Link href="/about">
             <A>団体概要 →</A>
           </Link>
-          <KeyboardArrowDownIcon
-            style={{
-              color: `#fff`,
-              margin: `0 auto`,
-              position: `absolute`,
-              fontSize: `35px`,
-              fontWeight: `bold`,
-              top: `95%`,
-              left: `50%`,
-              msTransform: `translate(-50%, -50%)`,
-              WebkitTransform: `translate(-50%, -50%)`,
-              transform: `translate(-50%, -50%)`,
-            }}
-          ></KeyboardArrowDownIcon>
+          {!!firebase && (
+            <KeyboardArrowDownIcon
+              style={{
+                color: `#fff`,
+                margin: `0 auto`,
+                position: `absolute`,
+                fontSize: `35px`,
+                fontWeight: `bold`,
+                top: `95%`,
+                left: `50%`,
+                msTransform: `translate(-50%, -50%)`,
+                WebkitTransform: `translate(-50%, -50%)`,
+                transform: `translate(-50%, -50%)`,
+              }}
+            ></KeyboardArrowDownIcon>
+          )}
         </Cover>
       </Fade>
     </>

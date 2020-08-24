@@ -134,18 +134,19 @@ const Footer = () => {
           )}
           {!!user && <LogOut onClick={handleLogOutClick}>ログアウト</LogOut>}
         </Paragraph1>
-
-        <ImgContainer>
-          <SNSLink href="" target="_blank">
-            <FacebookIcon alt="Facebook" style={{}}></FacebookIcon>
-          </SNSLink>
-          <SNSLink>
-            <YouTubeIcon alt="Youtube"></YouTubeIcon>
-          </SNSLink>
-          <SNSLink>
-            <TwitterIcon alt="Twitter"></TwitterIcon>
-          </SNSLink>
-        </ImgContainer>
+        {!!firebase && (
+          <ImgContainer>
+            <SNSLink href="" target="_blank">
+              <FacebookIcon alt="Facebook" style={{}}></FacebookIcon>
+            </SNSLink>
+            <SNSLink>
+              <YouTubeIcon alt="Youtube"></YouTubeIcon>
+            </SNSLink>
+            <SNSLink>
+              <TwitterIcon alt="Twitter"></TwitterIcon>
+            </SNSLink>
+          </ImgContainer>
+        )}
 
         <Paragraph2>
           <Line>

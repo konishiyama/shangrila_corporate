@@ -133,15 +133,15 @@ const Header = () => {
         </Toggle>
         {navbarOpen ? (
           <Navbox>
-            <NavbarLinks
-              navbarOpen={navbarOpen}
-              onClick={() => setNavbarOpen(!navbarOpen)}
-            />
+            {!!firebase && (
+              <NavbarLinks
+                navbarOpen={navbarOpen}
+                onClick={() => setNavbarOpen(!navbarOpen)}
+              />
+            )}
           </Navbox>
         ) : (
-          <Navbox open>
-            <NavbarLinks />
-          </Navbox>
+          <Navbox open>{!!firebase && <NavbarLinks />}</Navbox>
         )}
         {navbarOpen ? (
           <BG onClick={() => setNavbarOpen(!navbarOpen)} />

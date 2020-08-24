@@ -1,8 +1,9 @@
 import Link from "next/link"
-import React from "react"
+import React, { useContext } from "react"
 import styled from "styled-components"
 import Fade from "react-reveal/Fade"
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown"
+import { FirebaseContext } from "./Firebase"
 
 const Cover = styled.div`
   position: relative;
@@ -108,6 +109,8 @@ const A = styled.a`
 `
 
 const TopCover = () => {
+  const { user, firebase } = useContext(FirebaseContext)
+
   return (
     <>
       <Fade duration={2500}>

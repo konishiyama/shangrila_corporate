@@ -120,7 +120,7 @@ const Hamburger = styled.div`
 `
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
-  const { user } = useContext(FirebaseContext)
+  const { user, firebase } = useContext(FirebaseContext)
 
   return (
     <>

@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { useRouter } from "next/router"
 import React, { useContext, useState } from "react"
 import styled from "styled-components"
@@ -37,7 +38,6 @@ const Login = () => {
       .login({ email: formValues.email, password: formValues.password })
       .then(() => router.push("/"))
       .catch(error => {
-        console.log(error)
         setErrorMessage(error.message)
       })
   }
@@ -102,39 +102,27 @@ const Login = () => {
             Login
           </Button>
         </Form>
-        {/* <div
-        style={{
-          margin: `1rem auto 0.5rem`,
-          fontSize: `16px`,
-        }}>
-          or log in with
-        </div> */}
-        {/* <Facebook>
-          <FBContainer>
-            <span style={{
-              fontFamily: `Lucida Grande`,
-              fontWeight: `bold`,
-              fontSize: `14px`,
-              // color: `#1877F2`,
-              paddingLeft: `5px`,
-            }}>Facebook</span>
-          </FBContainer>
-        </Facebook> */}
         <br />
         <SmallP>
           <p>
-            <A href="/register">パスワード</A>
+            <Link href="/register">
+              <A>パスワード</A>
+            </Link>
             をお忘れですか？
           </p>
         </SmallP>
         <SmallP>
           <p>
             会員登録は
-            <A href="/register">こちら</A>
+            <Link href="/register">
+              <A>こちら</A>
+            </Link>
           </p>
         </SmallP>
         <br />
       </FormContainer>
+      <br></br>
+      <br></br>
       <br></br>
       <br></br>
       <br></br>

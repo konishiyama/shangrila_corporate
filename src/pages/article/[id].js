@@ -64,22 +64,22 @@ const ArticleTemplate = props => {
         ></div>
         <BottomBar>
           <FacebookShareButton
-            url={`https://infallible-rosalind-21f943.netlify.app/article/${pageContext.articleNum}`}
+            url={`https://competent-babbage-50b994.netlify.app/article/${pageContext.articleNum}`}
+            size={`2.3rem`}
             style={{
               display: `flex`,
               alignItems: `center`,
+              marginRight: `1em`,
+              borderRadius: `50%`,
+              border: `0`,
+              padding: `0`,
+              // boxShadow: `rgba(0, 0, 0, 0.4) 0 2px 5px`,
             }}
           >
-            <FacebookIcon
-              size={`2.3rem`}
-              round
-              style={{
-                marginRight: `1em`,
-              }}
-            />
+            <FacebookIcon size={`2.3rem`} round style={{}} />
           </FacebookShareButton>
           <TwitterShareButton
-            url={`https://infallible-rosalind-21f943.netlify.app/article/${pageContext.articleNum}`}
+            url={`https://competent-babbage-50b994.netlify.app/article/${pageContext.articleNum}`}
             style={{
               display: `flex`,
               alignItems: `center`,
@@ -94,7 +94,7 @@ const ArticleTemplate = props => {
             />
           </TwitterShareButton>
           <LineShareButton
-            url={`https://infallible-rosalind-21f943.netlify.app/article/${pageContext.articleNum}`}
+            url={`https://competent-babbage-50b994.netlify.app/article/${pageContext.articleNum}`}
             style={{
               display: `flex`,
               alignItems: `center`,

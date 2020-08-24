@@ -1,3 +1,4 @@
+import Link from "next/link"
 import React from "react"
 import styled from "styled-components"
 import Fade from "react-reveal/Fade"
@@ -38,7 +39,9 @@ const Declaration = () => {
             margin: `0 auto`,
           }}
         >
-          <TopLink href="/about/vision">設立理念 →</TopLink>
+          <Link href="/about/vision">
+            <TopLink Link>設立理念 →</TopLink>
+          </Link>
         </div>
       </Fade>
     </>

@@ -32,6 +32,7 @@ const NavItem = styled.a`
   }
 
   :hover {
+    cursor: pointer;
     color: #4c9c41;
     ::after {
       width: 100%;
@@ -115,17 +116,16 @@ const NavbarLinks = () => {
       <Link href="/blog">
         <NavItem>ブログ</NavItem>
       </Link>
-      {/* <NavItem href="/contact">Contact</NavItem> */}
       {!user && (
         <Link href="/login">
           <NavItem>ログイン</NavItem>
         </Link>
       )}
-      {!!user && !!user.admin && (
-        <Link href="/postarticle">
+      {/* {!!user && !!user.admin && (
+        <a href="/postarticle">
           <NavItem>記事投稿</NavItem>
-        </Link>
-      )}
+        </a>
+      )} */}
       {!!user && (
         <Link href="/member">
           <NavItem>会員掲示板</NavItem>

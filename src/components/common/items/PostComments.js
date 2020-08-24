@@ -111,7 +111,6 @@ export const PostComments = ({ firebase, postId }) => {
             e.persist()
             setCommentText(e.target.value)
             setTimeStamp(new Date().toLocaleString().slice(0, -3))
-            console.log(user.username)
           }}
         />
         <div
@@ -141,7 +140,10 @@ export const PostComments = ({ firebase, postId }) => {
                   <CommentImage src={comment.photoURL}></CommentImage>
                 )}
                 {!comment.photoURL && (
-                  <CommentImage src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2FuserDefaultPic.png?alt=media&token=2e1c678f-910a-4332-a6c5-6d3161aa16e6"></CommentImage>
+                  <CommentImage
+                    src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2FuserDefaultPic.png?alt=media&token=2e1c678f-910a-4332-a6c5-6d3161aa16e6"
+                    alt="userpic"
+                  ></CommentImage>
                 )}
               </div>
               <div

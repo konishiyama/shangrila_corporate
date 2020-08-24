@@ -102,11 +102,11 @@ const Profile = () => {
       <br></br>
       {!!user && (
         <FormContainer>
-          <Title>CHANGE PICTURE</Title>
+          <Title>プロフィール画像変更</Title>
           {!!PimageUrl && <ProfileImage2 src={PimageUrl}></ProfileImage2>}
 
           <Form onSubmit={onSubmitPFile}>
-            <SubIndex>PROFILE IMAGE</SubIndex>
+            <SubIndex>プロフィール画像</SubIndex>
             <input
               type="file"
               onChange={handlePImage}
@@ -133,6 +133,10 @@ const Profile = () => {
           <br />
         </FormContainer>
       )}
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <br></br>
       <br></br>
       <br></br>

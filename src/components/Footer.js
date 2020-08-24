@@ -140,10 +140,10 @@ const Footer = () => {
             <FacebookIcon alt="Facebook" style={{}}></FacebookIcon>
           </SNSLink>
           <SNSLink>
-            <YouTubeIcon></YouTubeIcon>
+            <YouTubeIcon alt="Youtube"></YouTubeIcon>
           </SNSLink>
           <SNSLink>
-            <TwitterIcon></TwitterIcon>
+            <TwitterIcon alt="Twitter"></TwitterIcon>
           </SNSLink>
         </ImgContainer>
 

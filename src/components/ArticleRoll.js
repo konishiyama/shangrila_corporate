@@ -71,7 +71,7 @@ const ArticleRoll = props => {
           <A>
             <Container>
               <ImgContainer>
-                <Thumnail src={props.thumnail}></Thumnail>
+                <Thumnail src={props.thumnail} alt="thumnail"></Thumnail>
               </ImgContainer>
               <TextContainer>
                 <Title>{props.title}</Title>

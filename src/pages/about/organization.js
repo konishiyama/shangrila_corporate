@@ -7,7 +7,7 @@ const TH = styled.th`
   width: 30%;
   font-weight: 500;
   color: #4c9c41;
-  padding: 1.5em 0 1.5em 0.8em;
+  padding: 1.8em 0 1.5em 0.8em;
   font-family: "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro",
     "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, serif;
   vertical-align: top;
@@ -16,11 +16,11 @@ const TH = styled.th`
 const TD = styled.td`
   word-break: break-all;
   line-height: 2;
-  font-size: 10px;
+  font-size: 12px;
   width: 70%;
   font-family: "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro",
     "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, serif;
-  padding: 2em 0 1.5em 0;
+  padding: 1.8em 0 1.5em 0;
 `
 
 const TdContainer = styled.div`

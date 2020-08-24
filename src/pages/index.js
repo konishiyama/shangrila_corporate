@@ -10,10 +10,11 @@ import Fade from "react-reveal/Fade"
 
 const SeeMore = styled.a`
   text-decoration: none;
-  color: #808080;
+  color: #4c9c41;
+  font-weight: bold;
   &:hover {
-    color: #4c9c41;
-    transition: all 0.4s ease-in;
+    opacity: 30%;
+    // transition: all 0.4s ease-in;
   }
 `
 

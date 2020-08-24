@@ -15,7 +15,7 @@ export const PageTitle = styled.div`
   p {
     font-weight: 200;
     letter-spacing: 0.03em;
-    font-size: 10px;
+    font-size: 12px;
     color: #808080;
     // margin: 0 auto;
   }

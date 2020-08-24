@@ -88,9 +88,14 @@ const PostRoll = props => {
             <Container>
               <Title>{props.title}</Title>
               <SubContainer>
-                {!!props.userPhoto && <Image src={props.userPhoto}></Image>}
+                {!!props.userPhoto && (
+                  <Image src={props.userPhoto} alt="profilepic"></Image>
+                )}
                 {!props.userPhoto && (
-                  <Image src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2FuserDefaultPic.png?alt=media&token=2e1c678f-910a-4332-a6c5-6d3161aa16e6"></Image>
+                  <Image
+                    src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2FuserDefaultPic.png?alt=media&token=2e1c678f-910a-4332-a6c5-6d3161aa16e6"
+                    alt="profilepic"
+                  ></Image>
                 )}
                 <div>{props.username}</div>
                 <span>{props.date}</span>

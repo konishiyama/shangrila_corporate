@@ -52,6 +52,7 @@ const ImgContainer = styled.div`
 const Img = styled.img`
   width: 100%;
   margin: 30px 0 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 `
 
 const Activity = () => {
@@ -70,7 +71,10 @@ const Activity = () => {
         </Fade>
         <Fade right duration={1500} distance="50px">
           <ImgContainer>
-            <Img src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050"></Img>
+            <Img
+              src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050"
+              alt="activity"
+            ></Img>
           </ImgContainer>
         </Fade>
       </Container>
@@ -88,7 +92,10 @@ const Activity = () => {
         </Fade>
         <Fade right duration={1500} distance="50px">
           <ImgContainer>
-            <Img src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050"></Img>
+            <Img
+              src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050"
+              alt="activity"
+            ></Img>
           </ImgContainer>
         </Fade>
       </Container>
@@ -105,7 +112,10 @@ const Activity = () => {
         </Fade>
         <Fade right duration={1500} distance="50px">
           <ImgContainer>
-            <Img src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050"></Img>
+            <Img
+              src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050"
+              alt="activity"
+            ></Img>
           </ImgContainer>
         </Fade>
       </Container>

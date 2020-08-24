@@ -1,3 +1,4 @@
+import Link from "next/link"
 import React from "react"
 import styled from "styled-components"
 import Fade from "react-reveal/Fade"
@@ -101,6 +102,7 @@ const A = styled.a`
   &:hover {
     color: #fff;
     background-color: #a9ce84;
+    border: solid 1px #a9ce84;
     transition: all 0.2s ease-in;
   }
 `
@@ -108,13 +110,18 @@ const A = styled.a`
 const TopCover = () => {
   return (
     <>
-      <Fade duration={1500}>
+      <Fade duration={2500}>
         <Cover>
-          <img src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample8.jpg?alt=media&token=5c0974c3-a5a7-4815-8e4b-cf475d15da0d" />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample8.jpg?alt=media&token=5c0974c3-a5a7-4815-8e4b-cf475d15da0d"
+            alt="cover"
+          />
           <CoverP1>特定非営利法人</CoverP1>
           <CoverP2>Imolution</CoverP2>
           <CoverP3>Official Website</CoverP3>
-          <A href="/about">団体概要 →</A>
+          <Link href="/about">
+            <A>団体概要 →</A>
+          </Link>
           <KeyboardArrowDownIcon
             style={{
               color: `#fff`,

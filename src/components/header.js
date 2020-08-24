@@ -58,13 +58,32 @@ const Navbox = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     position: fixed;
-    width: 100%;
+    width: 70%;
     justify-content: flex-start;
     padding-top: 10vh;
     background-color: #fff;
     transition: all 0.3s ease-in;
     top: 6.5vh;
     left: ${props => (props.open ? "-100%" : "0")};
+  }
+`
+
+const BG = styled.div`
+  height: 100%;
+  position: fixed;
+  width: 30%;
+  z-index: 500;
+  background-color: #000;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  top: 6.5vh;
+  right: 0;
+
+  @media (max-width: 768px) {
+    right: ${props => (props.open ? "-100%" : "0")};
+    // visibility: ${props => (props.open ? "hidden" : "visible")};
+    opacity: ${props => (props.open ? "0" : "60%")};
   }
 `
 
@@ -124,6 +143,11 @@ const Header = () => {
             <NavbarLinks />
           </Navbox>
         )}
+        {navbarOpen ? (
+          <BG onClick={() => setNavbarOpen(!navbarOpen)} />
+        ) : (
+          <BG open />
+        )}
 
         {/* <a href="/"
          style={{
@@ -151,7 +175,10 @@ const Header = () => {
                   alignItems: `center`,
                 }}
               >
-                <ProfileImage src={user.photoURL}></ProfileImage>
+                <ProfileImage
+                  src={user.photoURL}
+                  alt="profilepic"
+                ></ProfileImage>
               </a>
             </Link>
           </div>
@@ -165,7 +192,10 @@ const Header = () => {
                   alignItems: `center`,
                 }}
               >
-                <ProfileImage src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2FuserDefaultPic.png?alt=media&token=2e1c678f-910a-4332-a6c5-6d3161aa16e6"></ProfileImage>
+                <ProfileImage
+                  src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2FuserDefaultPic.png?alt=media&token=2e1c678f-910a-4332-a6c5-6d3161aa16e6"
+                  alt="profilepic"
+                ></ProfileImage>
               </a>
             </Link>
           </div>

@@ -49,12 +49,12 @@ const Message = props => {
       <section>
         <PageTitle>
           <span>代表メッセージ</span>
-          <p>Message from President</p>
+          <p>Message</p>
         </PageTitle>
         <PresidentPic>
           <img
             src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fprofile_pic_height_optimized.jpg?alt=media&token=57bae787-a0e7-4735-a436-347e5f6123b4"
-            alt="coverImg"
+            alt="Shohei Yamaguchi"
           ></img>
           <p>
             産業と自然がともに生きる

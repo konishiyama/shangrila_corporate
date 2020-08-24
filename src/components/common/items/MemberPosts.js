@@ -24,7 +24,7 @@ export const MemberPosts = ({ firebase }) => {
           style={{
             margin: `0 auto`,
             maxWidth: 960,
-            padding: `0 0.8rem 1.45rem`,
+            padding: `0 0 1.45rem`,
           }}
         >
           {latestMemberPosts.map(post => (

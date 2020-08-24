@@ -17,16 +17,19 @@ const Profile = () => {
     <section>
       <Container>
         <SubTitle>
-          <span>PROFILE</span>
+          <span>プロフィール</span>
         </SubTitle>
         {!!user && !!user.photoURL && (
           <Link href="/profile-edit">
-            <ProfileImage2 src={user.photoURL}></ProfileImage2>
+            <ProfileImage2 src={user.photoURL} alt="profilepic"></ProfileImage2>
           </Link>
         )}
         {!!user && !user.photoURL && (
           <Link href="/profile-edit">
-            <ProfileImage2 src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2FuserDefaultPic.png?alt=media&token=2e1c678f-910a-4332-a6c5-6d3161aa16e6"></ProfileImage2>
+            <ProfileImage2
+              src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2FuserDefaultPic.png?alt=media&token=2e1c678f-910a-4332-a6c5-6d3161aa16e6"
+              alt="profilepic"
+            ></ProfileImage2>
           </Link>
         )}
         <br></br>

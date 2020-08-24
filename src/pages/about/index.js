@@ -29,13 +29,6 @@ const P = styled.p`
   line-height: 1.5;
 `
 
-const LinkP = styled.p`
-  position: inherit;
-  right: inherit;
-  top: inherit;
-  width: 100%;
-`
-
 const A = styled.a`
   font-size: 14px;
   color: #4c9c41;
@@ -82,9 +75,9 @@ const About = props => {
                 代表
                 山口翔平から皆様へのメッセージと、法人設立にかけた想いについて、お伝えしています。
               </P>
-              <LinkP>
-                <A href="/about/message">詳しくはこちら</A>
-              </LinkP>
+              <Link href="/about/message">
+                <A>詳しくはこちら</A>
+              </Link>
             </Fade>
           </Container>
           <Container>
@@ -99,9 +92,9 @@ const About = props => {
               <P>
                 NPO法人Imolutionの事業・活動内容等についてご覧いただけます。
               </P>
-              <LinkP>
-                <A href="/about/organization">詳しくはこちら</A>
-              </LinkP>
+              <Link href="/about/organization">
+                <A>詳しくはこちら</A>
+              </Link>
             </Fade>
           </Container>
           <Container>
@@ -116,9 +109,9 @@ const About = props => {
               <P>
                 本法人設立の趣旨や、運営する上での理念、目的等についてご紹介しています。
               </P>
-              <LinkP>
-                <A href="/about/vision">詳しくはこちら</A>
-              </LinkP>
+              <Link href="/about/vision">
+                <A>詳しくはこちら</A>
+              </Link>
             </Fade>
           </Container>
         </div>

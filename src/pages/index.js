@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <section>
-        <TopCover></TopCover>
+        {!!firebase && <TopCover></TopCover>}
         <div
           style={{
             margin: `0 auto`,

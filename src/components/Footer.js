@@ -6,7 +6,6 @@ import { useRouter } from "next/router"
 import React, { useContext } from "react"
 import styled from "styled-components"
 import { FirebaseContext } from "./Firebase"
-// import { Container } from "react-bootstrap"
 
 const Container = styled.div`
   background-color: #fff;

@@ -138,7 +138,7 @@ const Logout = styled.span`
 
   @media (min-width: 768px) {
     padding: 20px 0;
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     z-index: 6;
   }
 

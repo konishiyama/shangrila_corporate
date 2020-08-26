@@ -17,4 +17,12 @@ export const TopLink = styled.a`
     border: solid 1px #a9ce84;
     transition: all 0.2s ease-in;
   }
+
+  @media (min-width: 768px) {
+    width: 25%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 25%;
+  }
 `

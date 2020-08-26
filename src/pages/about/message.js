@@ -7,7 +7,7 @@ const PresidentPic = styled.div`
   margin-bottom: 1rem;
   text-align: center;
   background-color: #808080;
-  display: inline-block;
+  // display: inline-block;
 
   p {
     position: absolute;
@@ -30,17 +30,25 @@ const PresidentPic = styled.div`
     background-color: black;
     width: 100%;
     margin: 0;
-    height: 14rem;
+    height: 700px;
     object-fit: cover;
     display: block;
+
+    @media (min-width: 768px) {
+      height: 500px;
+    }
+
+    @media (min-width: 1024px) {
+      height: 630px;
+    }
   }
 
-  br {
-    display: block;
-    margin-bottom: 2px;
-    font-size: 2px;
-    line-height: 2px;
-  }
+  // br {
+  //   display: block;
+  //   margin-bottom: 2px;
+  //   font-size: 2px;
+  //   line-height: 2px;
+  // }
 `
 
 const Message = props => {

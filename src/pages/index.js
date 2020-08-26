@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => {
         <div
           style={{
             margin: `0 auto`,
-            maxWidth: 960,
+            maxWidth: 650,
             padding: `5rem 1.5rem 0rem`,
           }}
         >
@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => {
         <div
           style={{
             margin: `0 auto`,
-            maxWidth: 960,
+            maxWidth: 480,
             padding: `0rem 0.8rem 0`,
           }}
         >
@@ -104,7 +104,7 @@ const IndexPage = ({ data }) => {
         <div
           style={{
             margin: `0 auto`,
-            maxWidth: 960,
+            maxWidth: 480,
             padding: `0rem 0.8rem 1.45rem`,
           }}
         >

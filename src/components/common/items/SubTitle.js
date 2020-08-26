@@ -18,8 +18,16 @@ export const SubTitle = styled.div`
     content: "";
     display: block;
     height: 1px;
-    width: 30vw;
+    width: 65px;
     margin: 1.5rem auto 0;
     background-color: #4c9c41;
+
+    @media (min-width: 768px) {
+      width: 75px;
+    }
+
+    @media (min-width: 1024px) {
+      width: 85px;
+    }
   }
 `

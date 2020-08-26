@@ -19,7 +19,7 @@ const Cover = styled.div`
     object-fit: cover;
 
     @media (min-width: 768px) {
-      height: 400px;
+      height: 500px;
     }
 
     @media (min-width: 1024px) {
@@ -47,6 +47,14 @@ const CoverP1 = styled.h1`
   font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro",
     "Hiragino Mincho Pro", "Sawarabi Mincho", "HG明朝E", "ＭＳ Ｐ明朝",
     "MS PMincho", "MS 明朝", serif;
+
+  @media (min-width: 768px) {
+    top: 60%;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 38px;
+  }
 `
 
 const CoverP2 = styled.h1`
@@ -66,6 +74,15 @@ const CoverP2 = styled.h1`
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-family: "Cormorant Infant", serif;
+
+  @media (min-width: 768px) {
+    top: 70%;
+  }
+
+  @media (min-width: 1024px) {
+    top: 67%;
+    font-size: 38px;
+  }
 `
 const CoverP3 = styled.p`
   position: absolute;
@@ -84,6 +101,15 @@ const CoverP3 = styled.p`
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-family: "Cormorant Infant", serif;
+
+  @media (min-width: 768px) {
+    top: 78%;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 20px;
+    top: 75%;
+  }
 `
 
 const A = styled.a`
@@ -105,6 +131,14 @@ const A = styled.a`
     background-color: #a9ce84;
     border: solid 1px #a9ce84;
     transition: all 0.2s ease-in;
+  }
+
+  @media (min-width: 768px) {
+    width: 20%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 15%;
   }
 `
 

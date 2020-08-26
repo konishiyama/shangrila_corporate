@@ -23,8 +23,16 @@ export const PageTitle = styled.div`
     content: "";
     display: block;
     height: 1.8px;
-    width: 30vw;
+    width: 65px;
     margin: 0.8rem auto 0;
     background-color: #4c9c41;
+
+    @media (min-width: 768px) {
+      width: 75px;
+    }
+
+    @media (min-width: 1024px) {
+      width: 85px;
+    }
   }
 `

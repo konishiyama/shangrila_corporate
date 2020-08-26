@@ -27,5 +27,13 @@ export const PageCover = styled.div`
     margin: 0;
     height: 8rem;
     object-fit: cover;
+
+    @media (min-width: 768px) {
+      height: 10rem;
+    }
+
+    @media (min-width: 1024px) {
+      height: 12rem;
+    }
   }
 `

@@ -135,8 +135,6 @@ const LOGO = styled.img`
 `
 
 const LogoLink = styled.a`
-  margin: 0 30px 0 0;
-
   @media (min-width: 1024px) {
     visibility: hidden;
   }

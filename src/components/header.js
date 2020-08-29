@@ -118,6 +118,30 @@ const Hamburger = styled.div`
     top: 8px;
   }
 `
+
+const LOGO = styled.img`
+  height: 8vw;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    height: 5vw;
+  }
+
+  @media (min-width: 1024px) {
+    visibility: hidden;
+  }
+`
+
+const LogoLink = styled.a`
+  margin: 0 30px 0 0;
+
+  @media (min-width: 1024px) {
+    visibility: hidden;
+  }
+`
+
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   const { user, firebase } = useContext(FirebaseContext)
@@ -149,22 +173,14 @@ const Header = () => {
           <BG open />
         )}
 
-        {/* <a href="/"
-         style={{
-          margin:`0 30px 0 0`,
-        }}
-      >
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fsample_logo.jpg?alt=media&token=65f254d8-cf14-49c8-89eb-e457519fea94"
-          style={{
-            height:`8vw`,
-            marginBottom: `0`,
-            display: `flex`,
-            alignItems: `center`
-          }}
-          alt="logoImg"
-        ></img>
-      </a> */}
+        <LogoLink href="/">
+          {!!firebase && (
+            <LOGO
+              src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Feuglena_logo.jpg?alt=media&token=c602cec8-72f2-4845-a096-e5bf02c7b1ba"
+              alt="LogoImg"
+            ></LOGO>
+          )}
+        </LogoLink>
 
         {!!user && (
           <div>

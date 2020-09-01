@@ -18,7 +18,7 @@ const TitleContainer = styled.div`
 const Cap = styled.span`
   text-align: left;
   margin: 0;
-  color: #4c9c41;
+  color: #f4b400;
   font-size: 40px;
   font-weight: bold;
   font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro",

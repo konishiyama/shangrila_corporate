@@ -31,18 +31,18 @@ const P = styled.p`
 
 const A = styled.a`
   font-size: 14px;
-  color: #4c9c41;
+  color: #f4b400;
   display: block;
   text-align: center;
-  border: solid 1px #4c9c41;
+  border: solid 1px #f4b400;
   padding: 1.3em;
   line-height: 1;
   text-decoration: none;
   margin-top: 1em;
   &:hover {
     color: #fff;
-    background-color: #a9ce84;
-    border: solid 1px #a9ce84;
+    background-color: #fdd000;
+    border: solid 1px #fdd000;
     transition: all 0.2s ease-in;
   }
 `

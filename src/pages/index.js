@@ -10,7 +10,7 @@ import Fade from "react-reveal/Fade"
 
 const SeeMore = styled.a`
   text-decoration: none;
-  color: #4c9c41;
+  color: #f4b400;
   font-weight: bold;
   &:hover {
     opacity: 30%;

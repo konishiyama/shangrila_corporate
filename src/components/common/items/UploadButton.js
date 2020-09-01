@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const UploadButton = styled.button`
   padding: 0 8px;
-  background: #4c9c41;
+  background: #f4b400;
   color: white;
   font-size: 10px;
   border-radius: 4px;

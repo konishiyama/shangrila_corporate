@@ -51,7 +51,7 @@ const Title = styled.h3`
   text-align: left;
   letter-spacing: normal;
   &:hover{
-    color: #4c9c41;
+    color: #F4B400;
     transition: all 0.4s ease-in;
   }
 `

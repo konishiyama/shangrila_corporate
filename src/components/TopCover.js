@@ -119,17 +119,18 @@ const A = styled.a`
   width: 35%;
   font-size: 14px;
   color: #fff;
+  background-color: #f4b400;
   display: block;
   text-align: center;
-  border: solid 1px #fff;
+  border: solid 1px #f4b400;
   padding: 0.5em;
   line-height: 1.5;
   text-decoration: none;
   margin-top: 1em;
   &:hover {
-    color: #fff;
-    background-color: #a9ce84;
-    border: solid 1px #a9ce84;
+    color: #f4b400;
+    background-color: #fff;
+    border: solid 1px #f4b400;
     transition: all 0.2s ease-in;
   }
 
@@ -150,7 +151,7 @@ const TopCover = () => {
       <Fade duration={2500}>
         <Cover>
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample8.jpg?alt=media&token=5c0974c3-a5a7-4815-8e4b-cf475d15da0d"
+            src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample7.jpg?alt=media&token=85fc967d-5da8-4903-8d34-a01f5aa69d65"
             alt="cover"
           />
           <CoverP1>特定非営利法人</CoverP1>

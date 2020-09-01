@@ -17,9 +17,9 @@ import { FirebaseContext } from "../components/Firebase"
 
 const A = styled.a`
   text-decoration: none;
-  color: #4c9c41;
+  color: #f4b400;
   &:hover {
-    color: #4c9c41;
+    color: #f4b400;
     cursor: pointer;
     text-decoration: underline;
   }

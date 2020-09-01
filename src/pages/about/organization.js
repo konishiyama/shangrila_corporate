@@ -6,7 +6,7 @@ const TH = styled.th`
   font-size: 12px;
   width: 30%;
   font-weight: 500;
-  color: #4c9c41;
+  color: #f4b400;
   padding: 1.8em 0 1.5em 0.8em;
   font-family: "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro",
     "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, serif;

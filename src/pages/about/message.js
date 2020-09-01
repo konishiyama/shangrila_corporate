@@ -30,7 +30,6 @@ const PresidentPic = styled.div`
     background-color: black;
     width: 100%;
     margin: 0;
-    height: 700px;
     object-fit: cover;
     display: block;
 

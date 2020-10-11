@@ -53,9 +53,9 @@ export const IndexArticles = ({ firebase }) => {
   )
   const articlesOrdered = articles.sort(function (a, b) {
     if (a.articleNum < b.articleNum) {
-      return 1
-    } else {
       return -1
+    } else {
+      return 1
     }
   })
   const latestArticles = articlesOrdered.slice(0, 4)

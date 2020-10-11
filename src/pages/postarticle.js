@@ -1,5 +1,6 @@
 import { Editor } from "@tinymce/tinymce-react"
 // import { navigate } from "gatsby"
+import { useRouter } from "next/router"
 import React, { useContext, useState } from "react"
 import {
   Button,
@@ -24,20 +25,22 @@ const PostArticle = ({ data }) => {
   const [imageUrl, setImageUrl] = useState("")
   const [timeStamp, setTimeStamp] = useState("")
   const [articleNumber, setArticleNumber] = useState("")
+  const router = useRouter()
 
   function handleSubmit(e) {
     e.preventDefault()
-    firebase.postArticle({
-      title: titleValues.title,
-      content: contentValues.content,
-      cover: imageUrl,
-      date: timeStamp,
-      articleNum: articleNumber,
-    })
-    // .then(() => navigate("/"))
-    // .catch(error => {
-    //   setErrorMessage(error.message)
-    // })
+    firebase
+      .postArticle({
+        title: titleValues.title,
+        content: contentValues.content,
+        cover: imageUrl,
+        date: timeStamp,
+        articleNum: articleNumber,
+      })
+      .then(router.push("/"))
+      .catch(error => {
+        setErrorMessage(error.message)
+      })
   }
 
   function handleInputTitleChange(e) {

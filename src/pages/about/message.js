@@ -26,7 +26,7 @@ const PresidentPic = styled.div`
   }
 
   img {
-    opacity: 55%;
+    opacity: 35%;
     background-color: black;
     width: 100%;
     margin: 0;
@@ -41,13 +41,26 @@ const PresidentPic = styled.div`
       height: 630px;
     }
   }
+`
 
-  // br {
-  //   display: block;
-  //   margin-bottom: 2px;
-  //   font-size: 2px;
-  //   line-height: 2px;
-  // }
+const SignatureContainer = styled.div`
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+`
+
+const Signature = styled.p`
+  line-height: 1.7;
+  font-size: 15px;
+  font-family: "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro",
+    "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, serif;
+  margin: 0 1.5rem 0 auto;
+  bottom: 0;
+`
+
+const SignatureImg = styled.img`
+  width: 8rem;
+  margin: 0;
 `
 
 const Message = props => {
@@ -59,15 +72,12 @@ const Message = props => {
           <p>Message</p>
         </PageTitle>
         <PresidentPic>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fprofile_pic_height_optimized.jpg?alt=media&token=57bae787-a0e7-4735-a436-347e5f6123b4"
-            alt="Shohei Yamaguchi"
-          ></img>
-          {/* <p>
+          <img src="../images/konishiyama_2.JPG" alt="Ko Nishiyama"></img>
+          <p>
             産業と自然がともに生きる
             <br></br>
             新しい循環型社会の実現へ
-          </p> */}
+          </p>
         </PresidentPic>
         <div
           style={{
@@ -91,6 +101,10 @@ const Message = props => {
           <BodyText>
             この利用規約（以下，「本規約」といいます。）は，＿＿＿＿＿（以下，「当社」といいます。）がこのウェブサイト上で提供するサービス（以下，「本サービス」といいます。）の利用条件を定めるものです。登録ユーザーの皆さま（以下，「ユーザー」といいます。）には，本規約に従って，本サービスをご利用いただきます。
           </BodyText>
+          <SignatureContainer>
+            <Signature>代表取締役社長</Signature>
+            <SignatureImg src="../images/signature.jpg"></SignatureImg>
+          </SignatureContainer>
           <br></br>
         </div>
       </section>

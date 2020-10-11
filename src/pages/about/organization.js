@@ -68,10 +68,9 @@ const Organization = props => {
                   <TdContainer>
                     1. 有料職業紹介事業(許可番号：13-ユ-311374)
                     <br></br>
-                    2. 各種コンサルティング事業
+                    2. 各種コンサルティング・調査事業
                     <br></br>
-                    3. 調査事業
-                    <br></br>
+                    3. ソフトウェア開発事業<br></br>
                   </TdContainer>
                 </TD>
               </tr>

@@ -65,10 +65,7 @@ const About = props => {
           <Container>
             <Fade cascade duration={2000}>
               <Pic>
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fprofile_pic_height_optimized.jpg?alt=media&token=57bae787-a0e7-4735-a436-347e5f6123b4"
-                  alt="coverImg"
-                ></img>
+                <img src="../images/konishiyama_2.JPG" alt="coverImg"></img>
               </Pic>
               <h3>代表メッセージ</h3>
               <P>
@@ -83,10 +80,7 @@ const About = props => {
           <Container>
             <Fade cascade duration={2000}>
               <Pic>
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fprofile_pic_height_optimized.jpg?alt=media&token=57bae787-a0e7-4735-a436-347e5f6123b4"
-                  alt="coverImg"
-                ></img>
+                <img src="../images/coverimage2.jpg" alt="coverImg"></img>
               </Pic>
               <h3>企業概要</h3>
               <P>
@@ -100,10 +94,7 @@ const About = props => {
           <Container>
             <Fade cascade duration={2000}>
               <Pic>
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fprofile_pic_height_optimized.jpg?alt=media&token=57bae787-a0e7-4735-a436-347e5f6123b4"
-                  alt="coverImg"
-                ></img>
+                <img src="../images/coverimage3.jpg" alt="coverImg"></img>
               </Pic>
               <h3>設立理念</h3>
               <P>

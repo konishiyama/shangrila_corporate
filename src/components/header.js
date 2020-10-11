@@ -7,7 +7,7 @@ import NavbarLinks from "./NavbarLinks"
 import ExitToAppRoundedIcon from "@material-ui/icons/ExitToAppRounded"
 
 const Navigation = styled.nav`
-  height: 10vh;
+  height: 6.5vh;
   display: flex;
   background-color: #fff;
   position: relative;
@@ -120,10 +120,14 @@ const Hamburger = styled.div`
 `
 
 const LOGO = styled.img`
-  height: 8vw;
+  height: 12vw;
   margin-bottom: 0;
   display: flex;
   align-items: center;
+
+  @media (min-width: 568px) {
+    height: 8vw;
+  }
 
   @media (min-width: 768px) {
     height: 5vw;
@@ -171,18 +175,14 @@ const Header = () => {
           <BG open />
         )}
         <div>
-          <Link href="/login">
+          <Link href="/">
             <a
               style={{
                 display: `flex`,
                 alignItems: `center`,
               }}
             >
-              <ExitToAppRoundedIcon
-                style={{
-                  color: `#02102e`,
-                }}
-              ></ExitToAppRoundedIcon>
+              <LOGO src="images/S-logo.png"></LOGO>
             </a>
           </Link>
         </div>

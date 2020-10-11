@@ -30,10 +30,10 @@ const Cover = styled.div`
 
 const CoverP1 = styled.h1`
   position: absolute;
-  top: 65%;
+  top: 15%;
   left: 50%;
-  width: 80%;
-  text-align: left;
+  width: 34%;
+  text-align: center;
   line-height: 1.5em;
   font-weight: normal;
   letter-spacing: 0.02em;
@@ -49,7 +49,9 @@ const CoverP1 = styled.h1`
     "MS PMincho", "MS 明朝", serif;
 
   @media (min-width: 768px) {
-    top: 60%;
+    text-align: left;
+    top: 25%;
+    left: 50%;
   }
 
   @media (min-width: 1024px) {
@@ -59,10 +61,10 @@ const CoverP1 = styled.h1`
 
 const CoverP2 = styled.h1`
   position: absolute;
-  top: 71%;
+  top: 22%;
   left: 50%;
-  width: 80%;
-  text-align: left;
+  width: 34%;
+  text-align: center;
   line-height: 1.5em;
   font-weight: normal;
   letter-spacing: 0.02em;
@@ -76,20 +78,21 @@ const CoverP2 = styled.h1`
   font-family: "Cormorant Infant", serif;
 
   @media (min-width: 768px) {
-    top: 70%;
+    text-align: left;
+    top: 35%;
+    left: 50%;
   }
 
   @media (min-width: 1024px) {
-    top: 67%;
     font-size: 38px;
   }
 `
 const CoverP3 = styled.p`
   position: absolute;
-  top: 77%;
+  top: 28%;
   left: 50%;
-  width: 80%;
-  text-align: left;
+  width: 34%;
+  text-align: center;
   line-height: 1.5em;
   font-weight: normal;
   letter-spacing: 0.02em;
@@ -103,43 +106,46 @@ const CoverP3 = styled.p`
   font-family: "Cormorant Infant", serif;
 
   @media (min-width: 768px) {
-    top: 78%;
+    text-align: left;
+    top: 45%;
+    left: 50%;
   }
 
   @media (min-width: 1024px) {
     font-size: 20px;
-    top: 75%;
   }
 `
 
 const A = styled.a`
   position: absolute;
-  top: 80%;
-  left: 10%;
-  width: 35%;
+  top: 43%;
+  left: 36%;
+  width: 28%;
   font-size: 14px;
   color: #fff;
-  background-color: #1e90ff;
+  // background-color: ;
   display: block;
   text-align: center;
-  border: solid 1px #1e90ff;
+  border: solid 1px #fff;
   padding: 0.5em;
   line-height: 1.5;
   text-decoration: none;
   margin-top: 1em;
   &:hover {
-    color: #1e90ff;
-    background-color: #fff;
+    color: #fff;
+    background-color: #1e90ff;
     border: solid 1px #1e90ff;
     transition: all 0.2s ease-in;
   }
 
   @media (min-width: 768px) {
     width: 20%;
+    top: 52%;
+    left: 10%;
   }
 
   @media (min-width: 1024px) {
-    width: 15%;
+    width: 10%;
   }
 `
 
@@ -150,10 +156,7 @@ const TopCover = () => {
     <>
       <Fade duration={2500}>
         <Cover>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/shangri-la-inc.appspot.com/o/topimage.jpg?alt=media&token=c3f1c742-097b-45ab-9dee-e2515bda4e15"
-            alt="cover"
-          />
+          <img src="images/coverImg.jpg" alt="cover" />
           <CoverP1>株式会社</CoverP1>
           <CoverP2>シャングリラ</CoverP2>
           <CoverP3>Official Website</CoverP3>

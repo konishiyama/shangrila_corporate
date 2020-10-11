@@ -18,6 +18,7 @@ class Firebase {
       thumnail: cover,
       date: date,
       articleNum: articleNum,
+      title: title,
     })
   }
 

@@ -9,7 +9,8 @@ import { FirebaseContext } from "./Firebase"
 
 const Container = styled.div`
   background-color: #fff;
-  padding: 1rem 0 1rem;
+  margin-top: 1rem;
+  padding: 2rem 0 2rem;
   box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.2);
   a {
     color: #787c7b;
@@ -21,61 +22,7 @@ const Container = styled.div`
   }
 `
 
-const Home = styled.div`
-  width: 50%;
-  text-align: center;
-  cursor: pointer;
-`
-
-const LogIn = styled.div`
-  width: 50%;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: bold;
-  a {
-    color: #787c7b;
-    text-decoration: none;
-    &:hover {
-      color: #787c7b;
-      transition: all 0.4s ease-in;
-    }
-  }
-`
-
-const LogOut = styled.span`
-  width: 50%;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: bold;
-  color: #787c7b;
-  &:hover {
-    color: #787c7b;
-  }
-`
-
-const ImgContainer = styled.div`
-  height: 18px;
-  width: 50%;
-  margin: 0 auto 1.5rem;
-  display: flex;
-  alignitems: center;
-`
-
-const SNSLink = styled.a`
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-`
-
-const Paragraph1 = styled.div`
-  width: 60%;
-  margin: 10px auto 1.5rem;
-  display: flex;
-`
-
-const Paragraph2 = styled.div`
+const Paragraph = styled.div`
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -103,7 +50,7 @@ const CopyRight = styled.p`
   font-size: 8px;
   color: #808080;
   text-align: center;
-  margin: 10px auto;
+  margin: 1.5rem auto 1rem;
 `
 
 const Footer = () => {
@@ -114,28 +61,7 @@ const Footer = () => {
   return (
     <>
       <Container>
-        <Paragraph1>
-          <Home>
-            <Link href="/">
-              <a>HOME</a>
-            </Link>
-          </Home>
-        </Paragraph1>
-        {!!firebase && (
-          <ImgContainer>
-            <SNSLink href="" target="_blank">
-              <FacebookIcon alt="Facebook" style={{}}></FacebookIcon>
-            </SNSLink>
-            <SNSLink>
-              <YouTubeIcon alt="Youtube"></YouTubeIcon>
-            </SNSLink>
-            <SNSLink>
-              <TwitterIcon alt="Twitter"></TwitterIcon>
-            </SNSLink>
-          </ImgContainer>
-        )}
-
-        <Paragraph2>
+        <Paragraph>
           <Line>
             <Link href="/about/organization">
               <a>企業概要</a>
@@ -147,9 +73,9 @@ const Footer = () => {
               <a>プライバシーポリシー</a>
             </Link>
           </Line>
-        </Paragraph2>
+        </Paragraph>
         <CopyRight>
-          Copyright © 2020 Shohei Yamaguchi All Rights Reserved.
+          Copyright © 2020 Shangri-La Inc. All Rights Reserved.
         </CopyRight>
       </Container>
     </>

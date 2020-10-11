@@ -11,10 +11,7 @@ const News = () => {
     <>
       <section>
         <PageCover>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050"
-            alt="coverImg"
-          ></img>
+          <img src="../images/coverImg.jpg" alt="coverImg"></img>
           <p>
             <span>NEWS</span>
           </p>

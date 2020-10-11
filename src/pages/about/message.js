@@ -72,7 +72,7 @@ const Message = props => {
           <p>Message</p>
         </PageTitle>
         <PresidentPic>
-          <img src="../images/konishiyama_2.JPG" alt="Ko Nishiyama"></img>
+          <img src="../images/konishiyama_2.jpg" alt="Ko Nishiyama"></img>
           <p>
             産業と自然がともに生きる
             <br></br>

@@ -65,7 +65,7 @@ const About = props => {
           <Container>
             <Fade cascade duration={2000}>
               <Pic>
-                <img src="../images/konishiyama_2.JPG" alt="coverImg"></img>
+                <img src="../images/konishiyama_2.jpg" alt="coverImg"></img>
               </Pic>
               <h3>代表メッセージ</h3>
               <P>

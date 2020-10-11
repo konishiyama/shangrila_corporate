@@ -63,14 +63,13 @@ const Footer = () => {
       <Container>
         <Paragraph>
           <Line>
-            <Link href="/about/organization">
-              <a>企業概要</a>
+            <Link href="/">
+              <a>トップ</a>
             </Link>
           </Line>
-          {/* <Span></Span> */}
           <Line>
-            <Link href="/privacy_policy">
-              <a>プライバシーポリシー</a>
+            <Link href="/about">
+              <a>企業概要</a>
             </Link>
           </Line>
         </Paragraph>

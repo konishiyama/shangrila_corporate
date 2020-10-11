@@ -138,12 +138,6 @@ const LOGO = styled.img`
   }
 `
 
-const LogoLink = styled.a`
-  @media (min-width: 1024px) {
-    visibility: hidden;
-  }
-`
-
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   const { firebase } = useContext(FirebaseContext)
@@ -182,7 +176,7 @@ const Header = () => {
                 alignItems: `center`,
               }}
             >
-              <LOGO src="images/S-logo.png"></LOGO>
+              {firebase && <LOGO src="../images/S-logo.png" />}
             </a>
           </Link>
         </div>

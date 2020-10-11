@@ -61,7 +61,7 @@ const CoverP1 = styled.h1`
 
 const CoverP2 = styled.h1`
   position: absolute;
-  top: 22%;
+  top: 23%;
   left: 50%;
   width: 34%;
   text-align: center;
@@ -89,7 +89,7 @@ const CoverP2 = styled.h1`
 `
 const CoverP3 = styled.p`
   position: absolute;
-  top: 28%;
+  top: 30%;
   left: 50%;
   width: 34%;
   text-align: center;
@@ -118,7 +118,7 @@ const CoverP3 = styled.p`
 
 const A = styled.a`
   position: absolute;
-  top: 43%;
+  top: 38%;
   left: 36%;
   width: 28%;
   font-size: 14px;
@@ -159,7 +159,7 @@ const TopCover = () => {
           <img src="images/coverImg.jpg" alt="cover" />
           <CoverP1>株式会社</CoverP1>
           <CoverP2>シャングリラ</CoverP2>
-          <CoverP3>Official Website</CoverP3>
+          <CoverP3>- Official Website -</CoverP3>
           <Link href="/about">
             <A>企業概要 →</A>
           </Link>

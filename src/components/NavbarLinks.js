@@ -42,13 +42,13 @@ const NavItemHome = styled.a`
   }
 
   @media (min-width: 768px) {
-    padding: 20px 0;
+    padding: 5px 0;
     font-size: 0.7rem;
     z-index: 6;
   }
 
   @media (min-width: 1024px) {
-    padding: 20px 0;
+    padding: 5px 0;
     font-size: 0.8rem;
     z-index: 6;
   }
@@ -89,65 +89,18 @@ const NavItem = styled.a`
   }
 
   @media (min-width: 768px) {
-    padding: 20px 0;
+    padding: 5px 0;
     font-size: 0.7rem;
     z-index: 6;
   }
 
   @media (min-width: 1024px) {
-    padding: 20px 0;
+    padding: 5px 0;
     font-size: 0.8rem;
     z-index: 6;
   }
 `
 
-const Logout = styled.span`
-  text-decoration: none;
-  color: #111;
-  padding: 20px 0;
-  font-size: 1rem;
-  font-family: "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro",
-    "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, serif;
-  z-index: 6;
-  display: inline-block;
-  white-space: nowrap;
-  margin: 0 1vw;
-  transition: all 200ms ease-in;
-  position: relative;
-  cursor: pointer;
-
-  :after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 0%;
-    content: ".";
-    color: transparent;
-    background: #1e90ff;
-    height: 1px;
-    transition: all 0.4s ease-in;
-  }
-
-  :hover {
-    color: #1e90ff;
-    ::after {
-      width: 100%;
-    }
-  }
-
-  @media (min-width: 768px) {
-    padding: 20px 0;
-    font-size: 0.7rem;
-    z-index: 6;
-  }
-
-  @media (min-width: 1024px) {
-    padding: 20px 0;
-    font-size: 0.8rem;
-    z-index: 6;
-  }
-`
 const NavbarLinks = () => {
   const router = useRouter()
 
@@ -161,7 +114,7 @@ const NavbarLinks = () => {
       <Link href="/about">
         <NavItem>企業情報</NavItem>
       </Link>
-      <Link href="/blog">
+      <Link href="/news">
         <NavItem>新着情報</NavItem>
       </Link>
     </>

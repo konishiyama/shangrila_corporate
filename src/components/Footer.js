@@ -11,7 +11,7 @@ const Container = styled.div`
   background-color: #fff;
   margin-top: 1rem;
   padding: 2rem 0 2rem;
-  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
   a {
     color: #787c7b;
     text-decoration: none;

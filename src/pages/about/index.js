@@ -31,18 +31,18 @@ const P = styled.p`
 
 const A = styled.a`
   font-size: 14px;
-  color: #f4b400;
+  color: #1e90ff;
   display: block;
   text-align: center;
-  border: solid 1px #f4b400;
+  border: solid 1px #1e90ff;
   padding: 1.3em;
   line-height: 1;
   text-decoration: none;
   margin-top: 1em;
   &:hover {
     color: #fff;
-    background-color: #fdd000;
-    border: solid 1px #fdd000;
+    background-color: #1e90ff;
+    border: solid 1px #1e90ff;
     transition: all 0.2s ease-in;
   }
 `
@@ -52,7 +52,7 @@ const About = props => {
     <>
       <section>
         <PageTitle>
-          <span>団体情報</span>
+          <span>企業情報</span>
           <p>About</p>
         </PageTitle>
         <div
@@ -73,7 +73,7 @@ const About = props => {
               <h3>代表メッセージ</h3>
               <P>
                 代表
-                山口翔平から皆様へのメッセージと、法人設立にかけた想いについて、お伝えしています。
+                西山洸から皆様へのメッセージと、法人設立にかけた想いについて、お伝えしています。
               </P>
               <Link href="/about/message">
                 <A>詳しくはこちら</A>
@@ -88,9 +88,9 @@ const About = props => {
                   alt="coverImg"
                 ></img>
               </Pic>
-              <h3>団体概要</h3>
+              <h3>企業概要</h3>
               <P>
-                NPO法人Imolutionの事業・活動内容等についてご覧いただけます。
+                株式会社シャングリラの事業・活動内容等についてご覧いただけます。
               </P>
               <Link href="/about/organization">
                 <A>詳しくはこちら</A>
@@ -107,7 +107,7 @@ const About = props => {
               </Pic>
               <h3>設立理念</h3>
               <P>
-                本法人設立の趣旨や、運営する上での理念、目的等についてご紹介しています。
+                当社設立の趣旨や、運営する上での理念、目的等についてご紹介しています。
               </P>
               <Link href="/about/vision">
                 <A>詳しくはこちら</A>

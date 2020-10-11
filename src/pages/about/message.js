@@ -63,11 +63,11 @@ const Message = props => {
             src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fprofile_pic_height_optimized.jpg?alt=media&token=57bae787-a0e7-4735-a436-347e5f6123b4"
             alt="Shohei Yamaguchi"
           ></img>
-          <p>
+          {/* <p>
             産業と自然がともに生きる
             <br></br>
             新しい循環型社会の実現へ
-          </p>
+          </p> */}
         </PresidentPic>
         <div
           style={{

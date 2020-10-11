@@ -18,7 +18,7 @@ const TitleContainer = styled.div`
 const Cap = styled.span`
   text-align: left;
   margin: 0;
-  color: #f4b400;
+  color: #1e90ff;
   font-size: 40px;
   font-weight: bold;
   font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro",
@@ -61,63 +61,63 @@ const Activity = () => {
       <Container>
         <Fade right duration={1500} distance="50px">
           <TitleContainer>
-            <Cap>農</Cap>
-            <Big>作物の生産</Big>
+            <Cap>海</Cap>
+            <Big>外人材紹介事業</Big>
           </TitleContainer>
         </Fade>
         <Fade right duration={1500} distance="50px">
-          <Small>サツマイモを中心とした</Small>
-          <Small>露地栽培作物を生産します</Small>
+          <Small>韓国・中国・台湾の人材の</Small>
+          <Small>日本企業への紹介事業</Small>
         </Fade>
-        <Fade right duration={1500} distance="50px">
+        {/* <Fade right duration={1500} distance="50px">
           <ImgContainer>
             <Img
-              src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050"
+              src="https://firebasestorage.googleapis.com/v0/b/shangri-la-inc.appspot.com/o/topimage3.jpg?alt=media&token=a7695180-d905-48ce-af8d-c730e236ae4c"
               alt="activity"
             ></Img>
           </ImgContainer>
-        </Fade>
+        </Fade> */}
       </Container>
 
       <Container>
         <Fade right duration={1500} distance="50px">
           <TitleContainer>
-            <Cap>生</Cap>
-            <Big>産物の販売</Big>
+            <Cap>コ</Cap>
+            <Big>ンサルティング事業</Big>
           </TitleContainer>
         </Fade>
         <Fade right duration={1500} distance="50px">
-          <Small>生産した農作物を</Small>
-          <Small>ECサイト等を通じて、一般販売します</Small>
+          <Small>東アジア地域に関する</Small>
+          <Small>各種コンサルテイング・調査事業</Small>
         </Fade>
-        <Fade right duration={1500} distance="50px">
+        {/* <Fade right duration={1500} distance="50px">
           <ImgContainer>
             <Img
               src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050"
               alt="activity"
             ></Img>
           </ImgContainer>
-        </Fade>
+        </Fade> */}
       </Container>
       <Container>
         <Fade right duration={1500} distance="50px">
           <TitleContainer>
-            <Cap>情</Cap>
-            <Big>報発信</Big>
+            <Cap>ソ</Cap>
+            <Big>フトウェア開発事業</Big>
           </TitleContainer>
         </Fade>
         <Fade right duration={1500} distance="50px">
-          <Small>農作物栽培に関するブログを作成し、</Small>
-          <Small>定期的に発信します</Small>
+          <Small>外国語ウェブサイトの制作等</Small>
+          <Small>各種ソフトウェア開発事業</Small>
         </Fade>
-        <Fade right duration={1500} distance="50px">
+        {/* <Fade right duration={1500} distance="50px">
           <ImgContainer>
             <Img
               src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample5.jpg?alt=media&token=496b4690-25e6-44f2-b9e3-f56cdfb50050"
               alt="activity"
             ></Img>
           </ImgContainer>
-        </Fade>
+        </Fade> */}
       </Container>
     </>
   )

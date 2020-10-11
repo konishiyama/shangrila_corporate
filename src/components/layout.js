@@ -1,14 +1,14 @@
 import PropTypes from "prop-types"
 import React from "react"
-import { FirebaseContext, useAuth } from "./Firebase"
+import { FirebaseContext, useFirebase } from "./Firebase"
 import Footer from "./Footer"
 import Header from "./header"
 
 const Layout = ({ children }) => {
-  const { user, firebase, loading } = useAuth()
+  const { firebase } = useFirebase()
 
   return (
-    <FirebaseContext.Provider value={{ user, firebase, loading }}>
+    <FirebaseContext.Provider value={{ firebase }}>
       <Header />
       <main>{children}</main>
       <Footer />

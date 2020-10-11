@@ -1,6 +1,6 @@
 import getFirebaseInstance from "./firebase"
-import useAuth from "./useAuth"
+import useFirebase from "./useFirebase"
 import FirebaseContext from "./context"
 
-export { FirebaseContext, useAuth }
+export { FirebaseContext, useFirebase }
 export default getFirebaseInstance

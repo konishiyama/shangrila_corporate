@@ -20,7 +20,7 @@ export const SubTitle = styled.div`
     height: 1px;
     width: 65px;
     margin: 1.5rem auto 0;
-    background-color: #f4b400;
+    background-color: #1e90ff;
 
     @media (min-width: 768px) {
       width: 75px;

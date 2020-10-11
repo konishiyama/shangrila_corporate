@@ -27,7 +27,7 @@ const NavItemHome = styled.a`
     width: 0%;
     content: ".";
     color: transparent;
-    background: #f4b400;
+    background: #1e90ff;
     height: 1px;
     transition: all 0.4s ease-in;
   }
@@ -35,7 +35,7 @@ const NavItemHome = styled.a`
   :hover {
     cursor: pointer;
     text-decoration: none;
-    color: #f4b400;
+    color: #1e90ff;
     ::after {
       width: 100%;
     }
@@ -74,7 +74,7 @@ const NavItem = styled.a`
     width: 0%;
     content: ".";
     color: transparent;
-    background: #f4b400;
+    background: #1e90ff;
     height: 1px;
     transition: all 0.4s ease-in;
   }
@@ -82,7 +82,7 @@ const NavItem = styled.a`
   :hover {
     cursor: pointer;
     text-decoration: none;
-    color: #f4b400;
+    color: #1e90ff;
     ::after {
       width: 100%;
     }
@@ -124,13 +124,13 @@ const Logout = styled.span`
     width: 0%;
     content: ".";
     color: transparent;
-    background: #f4b400;
+    background: #1e90ff;
     height: 1px;
     transition: all 0.4s ease-in;
   }
 
   :hover {
-    color: #f4b400;
+    color: #1e90ff;
     ::after {
       width: 100%;
     }
@@ -151,11 +151,7 @@ const Logout = styled.span`
 const NavbarLinks = () => {
   const router = useRouter()
 
-  const { firebase, user } = useContext(FirebaseContext)
-
-  function handleLogOutClick() {
-    firebase.logout().then(() => router.push("/login"))
-  }
+  const { firebase } = useContext(FirebaseContext)
 
   return (
     <>
@@ -163,27 +159,11 @@ const NavbarLinks = () => {
         <NavItemHome>HOME</NavItemHome>
       </Link>
       <Link href="/about">
-        <NavItem>団体情報</NavItem>
+        <NavItem>企業情報</NavItem>
       </Link>
       <Link href="/blog">
-        <NavItem>ブログ</NavItem>
+        <NavItem>新着情報</NavItem>
       </Link>
-      {!user && (
-        <Link href="/login">
-          <NavItem>ログイン</NavItem>
-        </Link>
-      )}
-      {/* {!!user && !!user.admin && (
-        <a href="/postarticle">
-          <NavItem>記事投稿</NavItem>
-        </a>
-      )} */}
-      {!!user && (
-        <Link href="/member">
-          <NavItem>会員掲示板</NavItem>
-        </Link>
-      )}
-      {!!user && <Logout onClick={handleLogOutClick}>Logout</Logout>}
     </>
   )
 }

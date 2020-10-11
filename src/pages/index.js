@@ -4,13 +4,13 @@ import TopCover from "../components/TopCover"
 import Declaration from "../components/Declaration"
 import Activity from "../components/Activity"
 import Contact from "../components/Contact"
-import { IndexArticles, IndexMemberPosts, SubTitle } from "../components/common"
+import { IndexArticles, SubTitle } from "../components/common"
 import { FirebaseContext } from "../components/Firebase"
 import Fade from "react-reveal/Fade"
 
 const SeeMore = styled.a`
   text-decoration: none;
-  color: #f4b400;
+  color: #1e90ff;
   font-weight: bold;
   &:hover {
     opacity: 30%;
@@ -19,7 +19,7 @@ const SeeMore = styled.a`
 `
 
 const IndexPage = ({ data }) => {
-  const { user, firebase } = useContext(FirebaseContext)
+  const { firebase } = useContext(FirebaseContext)
 
   return (
     <>
@@ -35,49 +35,17 @@ const IndexPage = ({ data }) => {
           <Declaration></Declaration>
           <Fade bottom duration={1500}>
             <SubTitle>
-              <span>活動内容</span>
+              <span>事業内容</span>
             </SubTitle>
           </Fade>
           <Activity></Activity>
         </div>
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 480,
-            padding: `0rem 0.8rem 0`,
-          }}
-        >
-          {!!user && (
-            <div>
-              <Fade bottom duration={1500}>
-                <SubTitle>
-                  <span>コミュニティー</span>
-                </SubTitle>
-              </Fade>
-              <Fade duration={2500}>
-                {!!firebase && <IndexMemberPosts firebase={firebase} />}
-              </Fade>
-              <div
-                style={{
-                  margin: `2.5rem auto 0 `,
-                  textAlign: `center`,
-                }}
-              >
-                <Fade bottom duration={1500}>
-                  <SeeMore href="/member">{">>もっと見る"}</SeeMore>
-                </Fade>
-              </div>
-            </div>
-          )}
-        </div>
         <Fade bottom duration={1500}>
           <SubTitle>
-            <span>最新の記事</span>
+            <span>NEWS</span>
           </SubTitle>
         </Fade>
-        <Fade duration={1500}>
-          {!!firebase && <IndexArticles firebase={firebase} />}
-        </Fade>
+        {!!firebase && <IndexArticles firebase={firebase} />}
         <div
           style={{
             margin: `0 auto`,
@@ -92,7 +60,7 @@ const IndexPage = ({ data }) => {
             }}
           >
             <Fade bottom duration={1500}>
-              <SeeMore href="/blog">{">>もっと見る"}</SeeMore>
+              <SeeMore href="/news">{">>もっと見る"}</SeeMore>
             </Fade>
           </div>
         </div>

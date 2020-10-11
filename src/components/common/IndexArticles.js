@@ -60,46 +60,9 @@ export const IndexArticles = ({ firebase }) => {
   })
   const latestArticles = articlesOrdered.slice(0, 4)
 
-  /*
-  useEffect(() => {
-    const unsubscribe = firebase.subscribeToArticles({
-      onSnapshot: snapshot => {
-        console.log(snapshot)
-        const snapshotArticles = []
-        snapshot.forEach(doc => {
-          console.log(doc)
-          const data = doc.Ud.Ze.proto.mapValue.fields
-          snapshotArticles.push({
-            articleNum: data.articleNum,
-            content: data.content,
-            date: data.date,
-            thumnail: data.thumnail,
-            title: data.title,
-            ...doc.data(),
-          })
-        })
-        setArticles(snapshotArticles)
-      },
-    })
-
-    return () => {
-      if (unsubscribe) {
-        // unsubscribe();
-      }
-    }
-  }, [])
-  */
-
   return (
     <>
       <section>
-        {/* <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 0.8rem 1.45rem`,
-        }}
-      > */}
         <ArticleList>
           <Slider {...settings}>
             {latestArticles.map(article => (
@@ -115,7 +78,6 @@ export const IndexArticles = ({ firebase }) => {
             ))}
           </Slider>
         </ArticleList>
-        {/* </div> */}
       </section>
     </>
   )

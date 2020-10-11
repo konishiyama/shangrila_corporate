@@ -1,12 +1,12 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyD7rzp4h88tb6H5z6QZk7xFqTXJQlphX-4",
-  authDomain: "shohei-s-webapp-with-gatsby.firebaseapp.com",
-  databaseURL: "https://shohei-s-webapp-with-gatsby.firebaseio.com",
-  projectId: "shohei-s-webapp-with-gatsby",
-  storageBucket: "shohei-s-webapp-with-gatsby.appspot.com",
-  messagingSenderId: "540385530410",
-  appId: "1:540385530410:web:000a20eee7a7eccbfee953",
-  measurementId: "G-PJQDJ4BZS3",
+  apiKey: "AIzaSyD3iyiTTDZCA_R0079fJ6ntowXBeYKQWAE",
+  authDomain: "shangri-la-inc.firebaseapp.com",
+  databaseURL: "https://shangri-la-inc.firebaseio.com",
+  projectId: "shangri-la-inc",
+  storageBucket: "shangri-la-inc.appspot.com",
+  messagingSenderId: "340966166658",
+  appId: "1:340966166658:web:22929853063a672de4249b",
+  measurementId: "G-6CR0MRXJY8",
 }
 
 export default firebaseConfig

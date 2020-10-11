@@ -6,7 +6,7 @@ const TH = styled.th`
   font-size: 12px;
   width: 30%;
   font-weight: 500;
-  color: #f4b400;
+  color: #1e90ff;
   padding: 1.8em 0 1.5em 0.8em;
   font-family: "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro",
     "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, serif;
@@ -34,7 +34,7 @@ const Organization = props => {
     <>
       <section>
         <PageTitle>
-          <span>団体概要</span>
+          <span>企業概要</span>
           <p>Profile</p>
         </PageTitle>
         <div
@@ -48,50 +48,40 @@ const Organization = props => {
             <tbody>
               <tr>
                 <TH>法人名</TH>
-                <TD>特定非営利活動法人 IMOLUTION</TD>
+                <TD>株式会社シャングリラ</TD>
               </tr>
               <tr>
                 <TH>住所</TH>
-                <TD>栃木県日光市高徳508</TD>
+                <TD>東京都渋谷区渋谷3−6−3</TD>
               </tr>
               <tr>
                 <TH>設立年月日</TH>
-                <TD>2020年8月10日</TD>
+                <TD>2018年1月12日</TD>
               </tr>
               <tr>
                 <TH>代表者</TH>
-                <TD>山口 翔平</TD>
+                <TD>西山 洸</TD>
               </tr>
               <tr>
                 <TH>事業内容</TH>
                 <TD>
                   <TdContainer>
-                    1. 農場経営事業
+                    1. 有料職業紹介事業(許可番号：13-ユ-311374)
                     <br></br>
-                    2. 農作物販売・輸出事業
+                    2. 各種コンサルティング事業
                     <br></br>
-                    3. 農業初心者への情報発信
-                    <br></br>
-                    4. 農作物を通じた地方活性化事業
+                    3. 調査事業
                     <br></br>
                   </TdContainer>
                 </TD>
               </tr>
               <tr>
-                <TH>活動の種類</TH>
+                <TH>代表電話</TH>
                 <TD>
                   <TdContainer>
-                    1. まちづくりの推進を図る活動
+                    050-5534-1928
                     <br></br>
-                    2. 観光の振興を図る活動
-                    <br></br>
-                    3. 農山漁村又は中山間地域の振興を図る活動
-                    <br></br>
-                    4. 国際協力の活動
-                    <br></br>
-                    5. 科学技術の振興を図る活動
-                    <br></br>
-                    6. 経済活動の活性化を図る活動
+                    ※海外からの場合は冒頭に＋81
                     <br></br>
                   </TdContainer>
                 </TD>

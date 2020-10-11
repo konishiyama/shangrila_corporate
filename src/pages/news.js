@@ -4,7 +4,7 @@ import { BlogPageArticles, PageCover, BottomBar } from "../components/common"
 import CreateIcon from "@material-ui/icons/Create"
 import { FirebaseContext } from "../components/Firebase"
 
-const Blog = () => {
+const News = () => {
   const { user, firebase } = useContext(FirebaseContext)
 
   return (
@@ -16,7 +16,7 @@ const Blog = () => {
             alt="coverImg"
           ></img>
           <p>
-            <span>BLOG</span>
+            <span>NEWS</span>
           </p>
         </PageCover>
         <div
@@ -27,27 +27,10 @@ const Blog = () => {
           }}
         >
           {!!firebase && <BlogPageArticles firebase={firebase} />}
-          {/* {!!user &&  !!user.admin &&
-          <BottomBar>
-          <Link href="/postarticle">
-            <CreateIcon 
-              style={{
-                color: `white`,
-                backgroundColor: `#F4B400`,
-                borderRadius: `50%`,
-                padding: `0.5rem`,
-                height: `3rem`,
-                width: `3rem`,
-                boxShadow: `rgba(0, 0, 0, 0.4) 0 2px 5px`,
-              }}
-            />
-          </Link>
-        </BottomBar>
-        } */}
         </div>
       </section>
     </>
   )
 }
 
-export default Blog
+export default News

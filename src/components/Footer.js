@@ -107,13 +107,9 @@ const CopyRight = styled.p`
 `
 
 const Footer = () => {
-  const { firebase, user } = useContext(FirebaseContext)
+  const { firebase } = useContext(FirebaseContext)
 
   const router = useRouter()
-
-  function handleLogOutClick() {
-    firebase.logout().then(() => router.push("/login"))
-  }
 
   return (
     <>
@@ -124,14 +120,6 @@ const Footer = () => {
               <a>HOME</a>
             </Link>
           </Home>
-          {!user && (
-            <LogIn>
-              <Link href="/login">
-                <a>ログイン</a>
-              </Link>
-            </LogIn>
-          )}
-          {!!user && <LogOut onClick={handleLogOutClick}>ログアウト</LogOut>}
         </Paragraph1>
         {!!firebase && (
           <ImgContainer>

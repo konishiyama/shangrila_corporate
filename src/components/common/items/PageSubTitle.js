@@ -18,6 +18,6 @@ export const PageSubTitle = styled.div`
     height: 1.8px;
     width: 13vw;
     margin: 0.8rem auto 0;
-    background-color: #f4b400;
+    background-color: #1e90ff;
   }
 `

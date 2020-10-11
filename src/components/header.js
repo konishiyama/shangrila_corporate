@@ -142,7 +142,7 @@ const LogoLink = styled.a`
 
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
-  const { user, firebase } = useContext(FirebaseContext)
+  const { firebase } = useContext(FirebaseContext)
 
   return (
     <>
@@ -170,68 +170,22 @@ const Header = () => {
         ) : (
           <BG open />
         )}
-
-        <LogoLink href="/">
-          {!!firebase && (
-            <LOGO
-              src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Feuglena_logo.jpg?alt=media&token=c602cec8-72f2-4845-a096-e5bf02c7b1ba"
-              alt="LogoImg"
-            ></LOGO>
-          )}
-        </LogoLink>
-
-        {!!user && (
-          <div>
-            <Link href="/profile">
-              <a
+        <div>
+          <Link href="/login">
+            <a
+              style={{
+                display: `flex`,
+                alignItems: `center`,
+              }}
+            >
+              <ExitToAppRoundedIcon
                 style={{
-                  display: `flex`,
-                  alignItems: `center`,
+                  color: `#02102e`,
                 }}
-              >
-                <ProfileImage
-                  src={user.photoURL}
-                  alt="profilepic"
-                ></ProfileImage>
-              </a>
-            </Link>
-          </div>
-        )}
-        {!!user && !user.photoURL && (
-          <div>
-            <Link href="/profile">
-              <a
-                style={{
-                  display: `flex`,
-                  alignItems: `center`,
-                }}
-              >
-                <ProfileImage
-                  src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2FuserDefaultPic.png?alt=media&token=2e1c678f-910a-4332-a6c5-6d3161aa16e6"
-                  alt="profilepic"
-                ></ProfileImage>
-              </a>
-            </Link>
-          </div>
-        )}
-        {!user && (
-          <div>
-            <Link href="/login">
-              <a
-                style={{
-                  display: `flex`,
-                  alignItems: `center`,
-                }}
-              >
-                <ExitToAppRoundedIcon
-                  style={{
-                    color: `#02102e`,
-                  }}
-                ></ExitToAppRoundedIcon>
-              </a>
-            </Link>
-          </div>
-        )}
+              ></ExitToAppRoundedIcon>
+            </a>
+          </Link>
+        </div>
       </Navigation>
     </>
   )

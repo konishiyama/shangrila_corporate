@@ -119,18 +119,18 @@ const A = styled.a`
   width: 35%;
   font-size: 14px;
   color: #fff;
-  background-color: #f4b400;
+  background-color: #1e90ff;
   display: block;
   text-align: center;
-  border: solid 1px #f4b400;
+  border: solid 1px #1e90ff;
   padding: 0.5em;
   line-height: 1.5;
   text-decoration: none;
   margin-top: 1em;
   &:hover {
-    color: #f4b400;
+    color: #1e90ff;
     background-color: #fff;
-    border: solid 1px #f4b400;
+    border: solid 1px #1e90ff;
     transition: all 0.2s ease-in;
   }
 
@@ -151,14 +151,14 @@ const TopCover = () => {
       <Fade duration={2500}>
         <Cover>
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/shohei-s-webapp-with-gatsby.appspot.com/o/site_default_images%2Fcoversample7.jpg?alt=media&token=85fc967d-5da8-4903-8d34-a01f5aa69d65"
+            src="https://firebasestorage.googleapis.com/v0/b/shangri-la-inc.appspot.com/o/topimage.jpg?alt=media&token=c3f1c742-097b-45ab-9dee-e2515bda4e15"
             alt="cover"
           />
-          <CoverP1>特定非営利法人</CoverP1>
-          <CoverP2>Imolution</CoverP2>
+          <CoverP1>株式会社</CoverP1>
+          <CoverP2>シャングリラ</CoverP2>
           <CoverP3>Official Website</CoverP3>
           <Link href="/about">
-            <A>団体概要 →</A>
+            <A>企業概要 →</A>
           </Link>
           {!!firebase && (
             <KeyboardArrowDownIcon

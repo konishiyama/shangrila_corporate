@@ -108,21 +108,6 @@ const ArticleTemplate = props => {
               }}
             />
           </LineShareButton>
-          {/* {!!user &&  !!user.admin &&
-          <Link href="/postarticle">
-            <CreateIcon
-              style={{
-                color: `white`,
-                backgroundColor: `#F4B400`,
-                borderRadius: `50%`,
-                padding: `0.5rem`,
-                height: `3rem`,
-                width: `3rem`,
-                margin: `0 0 0 auto`
-              }}
-            />
-          </Link>
-          }  */}
         </BottomBar>
       </div>
     </section>

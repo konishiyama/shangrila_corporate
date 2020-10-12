@@ -91,7 +91,7 @@ const About = props => {
               </Link>
             </Fade>
           </Container>
-          <Container>
+          {/* <Container>
             <Fade cascade duration={2000}>
               <Pic>
                 <img src="../images/coverimage3.jpg" alt="coverImg"></img>
@@ -104,7 +104,7 @@ const About = props => {
                 <A>詳しくはこちら</A>
               </Link>
             </Fade>
-          </Container>
+          </Container> */}
         </div>
       </section>
     </>

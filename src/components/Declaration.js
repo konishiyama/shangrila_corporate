@@ -12,7 +12,7 @@ const DeclarationP = styled.p`
   text-align: left;
   margin: 0 auto;
   color: #02102e;
-  font-size: 32px;
+  font-size: 25px;
 `
 
 const Declaration = () => {
@@ -20,17 +20,17 @@ const Declaration = () => {
     <>
       <DecContainer>
         <Fade bottom duration={2000}>
-          <DeclarationP>農業を通じて、</DeclarationP>
+          <DeclarationP>アジアという地域で</DeclarationP>
         </Fade>
         <br></br>
         <Fade bottom duration={2000}>
-          <DeclarationP>地方活性化を目指す</DeclarationP>
+          <DeclarationP>自由に人生を謳歌できる世界</DeclarationP>
         </Fade>
       </DecContainer>
       <Fade duration={2000}>
         <BodyText>
-          少子化や都市部への人口集中が加速する中、地方では人口減少問題が深刻化しています。当法人は、地方への移住希望者並びにその潜在層に対し、農業を通じて地方に定住・関与してもらうための取組を推進する
-          ことで、地方活性化等に参画したいと考える市民活動のプラットフォーム形成に寄与してまいります。
+          生まれた国や環境に依存せず、人生を存分に謳歌できる世界があったらどれだけいいことか。私達はそう考えています。
+          アジアという地域のどこかに生まれた一人のひとが、言語の壁や文化の差異、物理的な距離感といった障害を飛び越えて、より有意義な人生の「選択」を行うことができるサポートを行うための事業を展開しています。
         </BodyText>
       </Fade>
       <Fade duration={1500}>
@@ -39,8 +39,8 @@ const Declaration = () => {
             margin: `0 auto`,
           }}
         >
-          <Link href="/about/vision">
-            <TopLink Link>設立理念 →</TopLink>
+          <Link href="/about/message">
+            <TopLink Link>代表挨拶 →</TopLink>
           </Link>
         </div>
       </Fade>

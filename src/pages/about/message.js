@@ -72,7 +72,10 @@ const Message = props => {
           <p>Message</p>
         </PageTitle>
         <PresidentPic>
-          <img src="../images/konishiyama_2.jpg" alt="Ko Nishiyama"></img>
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/shangri-la-inc.appspot.com/o/konishiyama_2.jpg?alt=media&token=2753849c-3fe0-405d-8396-6ab081cc2912"
+            alt="Ko Nishiyama"
+          ></img>
           <p>
             人々が自由に、国境を超えて
             <br></br>
@@ -133,7 +136,7 @@ const Message = props => {
           <br></br>
           <SignatureContainer>
             <Signature>代表取締役社長</Signature>
-            <SignatureImg src="../images/signature.jpg"></SignatureImg>
+            <SignatureImg src="https://firebasestorage.googleapis.com/v0/b/shangri-la-inc.appspot.com/o/signature.jpg?alt=media&token=1ecb81b8-924a-42a4-8b01-d90796eca177"></SignatureImg>
           </SignatureContainer>
           <br></br>
         </div>

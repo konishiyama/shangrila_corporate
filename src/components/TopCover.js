@@ -156,7 +156,10 @@ const TopCover = () => {
     <>
       <Fade duration={2500}>
         <Cover>
-          <img src="images/coverImg.jpg" alt="cover" />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/shangri-la-inc.appspot.com/o/coverImg.jpg?alt=media&token=fddcd0b7-6b84-4351-9c19-dbbce9f1eec2"
+            alt="cover"
+          />
           <CoverP1>株式会社</CoverP1>
           <CoverP2>シャングリラ</CoverP2>
           <CoverP3>- Official Website -</CoverP3>

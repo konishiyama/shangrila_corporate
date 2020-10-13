@@ -65,7 +65,10 @@ const About = props => {
           <Container>
             <Fade cascade duration={2000}>
               <Pic>
-                <img src="../images/konishiyama_2.jpg" alt="coverImg"></img>
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/shangri-la-inc.appspot.com/o/konishiyama_2.jpg?alt=media&token=2753849c-3fe0-405d-8396-6ab081cc2912"
+                  alt="coverImg"
+                ></img>
               </Pic>
               <h3>代表メッセージ</h3>
               <P>
@@ -80,7 +83,10 @@ const About = props => {
           <Container>
             <Fade cascade duration={2000}>
               <Pic>
-                <img src="../images/coverimage2.jpg" alt="coverImg"></img>
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/shangri-la-inc.appspot.com/o/coverimage2.jpg?alt=media&token=3aa72228-b7af-401c-a700-954973a49447"
+                  alt="coverImg"
+                ></img>
               </Pic>
               <h3>企業概要</h3>
               <P>

@@ -150,7 +150,7 @@ const A = styled.a`
 `
 
 const TopCover = () => {
-  const { user, firebase } = useContext(FirebaseContext)
+  const { firebase } = useContext(FirebaseContext)
 
   return (
     <>
